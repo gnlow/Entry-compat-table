@@ -1,381 +1,797 @@
 start:
   when_run_button_click:
+    template: "{시작하기 버튼을 클릭했을 때}"
   when_some_key_pressed:
+    template: "{[q] 키를 눌렀을 때}"
   mouse_clicked:
+    template: "{마우스를 클릭했을 때}"
   mouse_click_cancled:
+    template: "{마우스 클릭을 해제했을 때}"
   when_object_click:
+    template: "{오브젝트를 클릭했을 때}"
   when_object_click_canceled:
+    template: "{오브젝트 클릭을 해제했을 때}"
   when_message_cast:
+    template: "{undefined 신호를 받았을 때}"
   message_cast:
+    template: "{undefined 신호 보내기}"
   message_cast_wait:
+    template: "{undefined 신호 보내고 기다리기}"
   when_scene_start:
+    template: "{장면이 시작되었을 때}"
   start_scene:
+    template: "{undefined 시작하기}"
   start_neighbor_scene:
-  # check_object_property:
-  # check_block_execution:
-  # switch_scope:
-  # is_answer_submited:
-  # check_lecture_goal:
-  # check_variable_by_name:
-  # show_prompt:
-  # check_goal_success:
-  # positive_number:
-  # negative_number:
-  # wildcard_string:
-  # wildcard_boolean:
-  # register_score:
+    template: "{[다음 | 이전] 장면 시작하기}"
+  check_object_property:
+    template: "{}"
+  check_block_execution:
+    template: "{ { }}"
+  switch_scope:
+    template: "{}"
+  is_answer_submited:
+    template: "{}"
+  check_lecture_goal:
+    template: "{}"
+  check_variable_by_name:
+    template: "()"
+  show_prompt:
+    template: "{}"
+  check_goal_success:
+    template: "<>"
+  positive_number:
+    template: "()"
+  negative_number:
+    template: "()"
+  wildcard_string:
+    template: "()"
+  wildcard_boolean:
+    template: "<>"
+  register_score:
+    template: "{}"
 flow:
   wait_second:
+    template: "{(10) 초 기다리기}"
   repeat_basic:
+    template: "{(10) 번 반복하기 { }}"
   repeat_inf:
+    template: "{계속 반복하기 { }}"
   repeat_while_true:
+    template: "{<참> [이 될 때까지 | 인 동안] 반복하기 { }}"
   stop_repeat:
+    template: "{반복 중단하기}"
   _if:
+    template: "{만일 <참> (이)라면 { }}"
   if_else:
+    template: "{만일 <참> (이)라면 { } 아니면}"
   wait_until_true:
+    template: "{<참> 이(가) 될 때까지 기다리기}"
   stop_object:
+    template: "{[모든 | 자신의 | 이 | 자신의 다른 | 다른 오브젝트의] 코드 멈추기}"
   restart_project:
+    template: "{처음부터 다시 실행하기}"
   when_clone_start:
+    template: "{복제본이 처음 생성되었을때}"
   create_clone:
+    template: "{undefined 의 복제본 만들기}"
   delete_clone:
+    template: "{이 복제본 삭제하기}"
   remove_all_clones:
+    template: "{모든 복제본 삭제하기}"
 moving:
   move_direction:
+    template: "{이동 방향으로 (10) 만큼 움직이기}"
   bounce_wall:
+    template: "{화면 끝에 닿으면 튕기기}"
   move_x:
+    template: "{x 좌표를 (10) 만큼 바꾸기}"
   move_y:
+    template: "{y 좌표를 (10) 만큼 바꾸기}"
   move_xy_time:
+    template: "{(10) 초 동안 x: (10) y: (10) 만큼 움직이기}"
   locate_x:
+    template: "{x: (10) 위치로 이동하기}"
   locate_y:
+    template: "{y: (10) 위치로 이동하기}"
   locate_xy:
+    template: "{x: (10) y: (10) 위치로 이동하기}"
   locate_xy_time:
+    template: "{(10) 초 동안 x: (10) y: (10) 위치로 이동하기}"
   locate:
+    template: "{undefined 위치로 이동하기}"
   locate_object_time:
+    template: "{(10) 초 동안 undefined 위치로 이동하기}"
   rotate_relative:
+    template: "{방향을 (10) 만큼 회전하기}"
   direction_relative:
+    template: "{이동 방향을 (10) 만큼 회전하기}"
   rotate_by_time:
+    template: "{(10) 초 동안 방향을 (10) 만큼 회전하기}"
   direction_relative_duration:
+    template: "{(10) 초 동안 이동 방향 (10) 만큼 회전하기}"
   rotate_absolute:
+    template: "{방향을 (10) (으)로 정하기}"
   direction_absolute:
+    template: "{이동 방향을 (10) (으)로 정하기}"
   see_angle_object:
+    template: "{undefined 쪽 바라보기}"
   move_to_angle:
+    template: "{(10) 방향으로 (10) 만큼 움직이기}"
 looks:
   show:
+    template: "{모양 보이기}"
   hide:
+    template: "{모양 숨기기}"
   dialog_time:
+    template: "{(10) 을(를) (10) 초 동안 [말하기 | 생각하기]}"
   dialog:
+    template: "{(10) 을(를) [말하기 | 생각하기]}"
   remove_dialog:
+    template: "{말풍선 지우기}"
   change_to_some_shape:
+    template: "{(10) 모양으로 바꾸기}"
   change_to_next_shape:
+    template: "{[다음 | 이전] 모양으로 바꾸기}"
   add_effect_amount:
+    template: "{[색깔 | 밝기 | 투명도] 효과를 (10) 만큼 주기}"
   change_effect_amount:
+    template: "{[색깔 | 밝기 | 투명도] 효과를 (10) (으)로 정하기}"
   erase_all_effects:
+    template: "{효과 모두 지우기}"
   change_scale_size:
+    template: "{크기를 (10) 만큼 바꾸기}"
   set_scale_size:
+    template: "{크기를 (10) (으)로 정하기}"
   flip_x:
+    template: "{상하 모양 뒤집기}"
   flip_y:
+    template: "{좌우 모양 뒤집기}"
   change_object_index:
+    template: "{[맨 앞으로 | 앞으로 | 뒤로 | 맨 뒤로] 보내기}"
 brush:
   brush_stamp:
+    template: "{도장 찍기}"
   start_drawing:
+    template: "{그리기 시작하기}"
   stop_drawing:
+    template: "{그리기 멈추기}"
   set_color:
+    template: "{그리기 색을 (10) (으)로 정하기}"
   change_thickness:
+    template: "{그리기 굵기를 (10) 만큼 바꾸기}"
   set_thickness:
+    template: "{그리기 굵기를 (10) (으)로 정하기}"
   start_fill:
+    template: "{채우기 시작하기}"
   stop_fill:
+    template: "{채우기 멈추기}"
   set_fill_color:
+    template: "{채우기 색을 (10) (으)로 정하기}"
   set_random_color:
+    template: "{붓의 색을 무작위로 정하기}"
   change_brush_transparency:
+    template: "{붓의 투명도를 (10) % 만큼 바꾸기}"
   set_brush_tranparency:
+    template: "{붓의 투명도를 (10) % 로 정하기}"
   brush_erase_all:
+    template: "{모든 붓 지우기}"
 text:
   text_read:
+    template: "(글상자 undefined의 내용)"
   text_write:
+    template: "{(10) 라고 글쓰기}"
   text_append:
+    template: "{(10) 라고 뒤에 이어쓰기}"
   text_prepend:
+    template: "{(10) 라고 앞에 추가하기}"
   text_change_effect:
+    template: "{텍스트에 [가로줄 | 밑줄 | 이탤릭 | 볼드] 효과 [켜기 | 끄기]}"
   text_change_font:
+    template: "{글씨체를 undefined 로 변경}"
   text_change_font_color:
+    template: "{글씨색을 (10) 로 변경}"
   text_change_bg_color:
+    template: "{배경색을 (10) 로 변경}"
   text_flush:
+    template: "{텍스트 모두 지우기}"
 sound:
   sound_something_with_block:
+    template: "{소리 (10) 재생하기}"
   sound_something_second_with_block:
+    template: "{소리 (10) (10) 초 재생하기}"
   sound_from_to:
+    template: "{소리 (10) (10) 초 부터 (10) 초까지 재생하기}"
   sound_something_wait_with_block:
+    template: "{소리 (10) 재생하고 기다리기}"
   sound_something_second_wait_with_block:
+    template: "{소리 (10) (10) 초 재생하고 기다리기}"
   sound_from_to_and_wait:
+    template: "{소리 (10) (10) 초 부터 (10) 초까지 재생하고 기다리기}"
   sound_volume_change:
+    template: "{소리 크기를 (10) 만큼 바꾸기}"
   sound_volume_set:
+    template: "{소리 크기를 (10) % 로 정하기}"
   sound_speed_change:
+    template: "{소리 빠르기를 (10) 만큼 바꾸기}"
   sound_speed_set:
+    template: "{소리 빠르기를 (10) 배로 정하기}"
   sound_silent_all:
+    template: "{[모든 | 자신의 | 다른 오브젝트의] 소리 멈추기}"
   play_bgm:
+    template: "{(10) 을(를) 배경음악으로 재생하기}"
   stop_bgm:
+    template: "{배경음악 멈추기}"
 judgement:
   is_clicked:
+    template: "<마우스를 클릭했는가?>"
   is_object_clicked:
+    template: "<오브젝트를 클릭했는가?>"
   is_press_some_key:
+    template: "<[next] 키가 눌러져 있는가?>"
   reach_something:
+    template: "<undefined 에 닿았는가?>"
   is_type:
+    template: "<(10) (이)가 [숫자 | 영문 | 한글] 인가?>"
   boolean_basic_operator:
+    template: "<(10) [= | != | > | < | ≥ | ≤] (10)>"
   boolean_and_or:
+    template: "<<참> [그리고 | 또는] <참>>"
   boolean_not:
+    template: "<<참> (이)가 아니다>"
   is_boost_mode:
+    template: "<부스트모드가 켜져 있는가?>"
 calc:
   calc_basic:
+    template: "((10) [+ | - | x | /] (10))"
   calc_rand:
+    template: "((10) 부터 (10) %5)"
   coordinate_mouse:
+    template: "(마우스 [x | y] 좌표)"
   coordinate_object:
+    template: "(undefined 의 [x 좌푯값 | y 좌푯값 | 방향 | 이동방향 | 크기 | 모양 번호 | 모양 이름])"
   get_sound_volume:
+    template: "(소릿값)"
   quotient_and_mod:
+    template: "((10) / (10) %5 %6)"
   calc_operation:
+    template: "((10) 의 [제곱 | 루트 | 사인값 | 코사인값 | 탄젠트값 | 아크사인값 | 아크코사인값 | 아크탄젠트값 | 로그값
+      | 자연로그값 | 소수점 부분 | 소수점 버림값 | 소수점 올림값 | 소수점 반올림값 | 펙토리얼값 | 절댓값])"
   get_project_timer_value:
+    template: "(초시계 값)"
   choose_project_timer_action:
+    template: "{초시계 [시작하기 | 정지하기 | 초기화하기]}"
   set_visible_project_timer:
+    template: "{초시계 [보이기 | 숨기기]}"
   get_date:
+    template: "(현재 [연도 | 월 | 일 | 요일 | 시각(시) | 시각(분) | 시각(초)])"
   distance_something:
+    template: "(undefined 까지의 거리)"
   get_sound_duration:
+    template: "(undefined 소리의 길이)"
   get_user_name:
+    template: "(아이디)"
   get_nickname:
+    template: "(닉네임)"
   length_of_string:
+    template: "((10) 의 글자 수)"
   count_match_string:
+    template: "((10) 에서 (10) 의 글자 수)"
   combine_something:
+    template: "((10) 과(와) (10) %5)"
   char_at:
+    template: "((10) 의 (10) %5)"
   substring:
+    template: "((10) 의 (10) %5 %6 %7)"
   index_of_string:
+    template: "((10) 에서 (10) %5)"
   replace_string:
+    template: "((10) 의 (10) %5 %6 %7)"
   reverse_of_string:
+    template: "((10) 을(를) 뒤집기)"
   change_string_case:
+    template: "((10) 의 [대문자 | 소문자] %5)"
   get_block_count:
+    template: "(undefined 의 블록 수)"
   change_rgb_to_hex:
+    template: "(R:(10)G:(10)B:(10)의 HEX 값)"
   change_hex_to_rgb:
+    template: "(HEX(10)의 [R | G | B]값)"
 variable:
   variableAddButton:
+    template: 변수 만들기
   listAddButton:
+    template: 리스트 만들기
   ask_and_wait:
+    template: "{(10) 을(를) 묻고 대답 기다리기}"
   get_canvas_input_value:
+    template: "(대답)"
   set_visible_answer:
+    template: "{대답 [보이기 | 숨기기]}"
   get_variable:
+    template: "(undefined 값)"
   change_variable:
+    template: "{undefined 에 (10) 만큼 더하기}"
   set_variable:
+    template: "{undefined 를 (10) (으)로 정하기}"
   show_variable:
+    template: "{변수 undefined 보이기}"
   hide_variable:
+    template: "{변수 undefined 숨기기}"
   value_of_index_from_list:
+    template: "(undefined 의 (10) %5)"
   add_value_to_list:
+    template: "{(10) 항목을 undefined 에 추가하기}"
   remove_value_from_list:
+    template: "{(10) 번째 항목을 undefined 에서 삭제하기}"
   insert_value_to_list:
+    template: "{(10) 을(를) undefined 의 (10) 번째에 넣기}"
   change_value_list_index:
+    template: "{undefined   (10) 번째 항목을 (10) (으)로 바꾸기}"
   length_of_list:
+    template: "(undefined 항목 수)"
   is_included_in_list:
+    template: "<undefined 에 (10) %5>"
   show_list:
+    template: "{리스트 undefined 보이기}"
   hide_list:
+    template: "{리스트 undefined 숨기기}"
 func:
   functionAddButton:
+    template: 함수 만들기
   function_name:
+    template: ''
   showFunctionPropsButton:
+    template: ''
   set_func_variable:
+    template: "{}"
   get_func_variable:
+    template: "()"
 analysis:
   analizyDataAddButton:
+    template: 테이블 불러오기
   append_row_to_table:
+    template: "{테이블 undefined에 [행 | 열] 추가하기}"
   insert_row_to_table:
+    template: "{테이블 undefined (10) 번째에 [행 | 열] 추가하기}"
   delete_row_from_table:
+    template: "{테이블 undefined (10)번째 [행 | 열] 삭제하기}"
   set_value_from_table:
+    template: "{테이블 undefined (10)번째 행의 (10)을(를) (10)(으)로 바꾸기 %5}"
   save_current_table:
+    template: "{테이블 undefined 을(를) 현재 상태로 남기기}"
   get_table_count:
+    template: "(테이블 undefined의 [행 | 열] 개수)"
   get_value_from_table:
+    template: "(테이블 undefined (10)번째 행의 (10) 값)"
   get_value_from_last_row:
+    template: "(테이블 undefined 마지막 행의 (10) 값)"
   calc_values_from_table:
+    template: "(테이블 undefined (10)의 [합 | 최대 | 최소 | 평균 | 표준편차 | 중앙값])"
   open_table:
+    template: "{테이블 undefined 창 열기}"
   open_table_wait:
+    template: "{테이블 undefined 창을 (10) 초 동안 열기}"
   open_table_chart:
+    template: "{테이블 undefined의 undefined 차트 창 열기}"
   close_table_chart:
+    template: "{테이블 차트 창 닫기}"
   get_coefficient:
+    template: "(테이블 undefined (10)과(와) (10)의 상관계수)"
 ai_utilize:
   aiUtilizeBlockAddButton:
+    template: 인공지능 블록 불러오기
   aiUtilizeModelTrainButton:
+    template: 인공지능 모델 학습하기
   learning_title_image:
+    template: '분류: 이미지 모델'
   learning_title_speech:
+    template: '분류: 소리 모델'
   learning_title_text:
+    template: '분류: 텍스트 모델'
   learning_title_number:
+    template: '분류: 숫자 (kNN) 모델'
   learning_title_regression:
+    template: '예측: 숫자 모델'
   learning_title_cluster:
+    template: '군집: 숫자 모델'
   learning_title_logistic_regression:
+    template: '분류: 숫자 (로지스틱 회귀) 모델'
   learning_title_decisiontree:
+    template: '분류: 숫자 (결정 트리) 모델'
   learning_title_svm:
+    template: '분류: 숫자 (SVM) 모델'
   retrain_model:
+    template: "{모델 다시 학습하기}"
   model_is_trained:
+    template: "<모델이 학습되었는가?>"
   set_train_visible:
+    template: "{모델 [보이기 | 숨기기]}"
   set_train_chart:
+    template: "{모델 차트 창 [열기 | 닫기]}"
   set_regression_option:
+    template: "{학습 조건 [학습률 | 에포크 | 검증 데이터 비율] 을 (10) 으로 바꾸기}"
   get_regression_predict_1:
+    template: "(undefined (10) 의 예측 값)"
   get_regression_predict_2:
+    template: "(undefined (10) undefined (10) 의 예측 값)"
   get_regression_predict_3:
+    template: "(undefined (10) undefined (10) %5 %6 의 예측 값)"
   get_regression_predict_4:
+    template: "(undefined (10) undefined (10) %5 %6 %7 %8 의 예측 값)"
   get_regression_predict_5:
+    template: "(undefined (10) undefined (10) %5 %6 %7 %8 %9 %10 의 예측 값)"
   get_regression_predict_6:
+    template: "(undefined (10) undefined (10) %5 %6 %7 %8 %9 %10 %11 %12 의 예측 값)"
   get_regression_accuracy:
+    template: "(결정계수)"
   set_logistic_regression_option:
+    template: "{학습 조건 [학습률 | 에포크 | 검증 데이터 비율] 을(를) (10) (으)로 바꾸기}"
   set_logistic_regression_optimizer:
+    template: "{최적화 알고리즘을 [Adam | SGD] (으)로 바꾸기}"
   get_logistic_regression_probability_1:
+    template: "(undefined (10) 의 undefined 에 대한 확률)"
   get_logistic_regression_probability_2:
+    template: "(undefined (10) undefined (10) 의 %5 에 대한 확률)"
   get_logistic_regression_probability_3:
+    template: "(undefined (10) undefined (10) %5 %6 의 %7 에 대한 확률)"
   get_logistic_regression_probability_4:
+    template: "(undefined (10) undefined (10) %5 %6 %7 %8 의 %9 에 대한 확률)"
   get_logistic_regression_probability_5:
+    template: "(undefined (10) undefined (10) %5 %6 %7 %8 %9 %10 의 %11 에 대한 확률)"
   get_logistic_regression_probability_6:
+    template: "(undefined (10) undefined (10) %5 %6 %7 %8 %9 %10 %11 %12 의 %13 에 대한
+      확률)"
   set_decisiontree_option:
+    template: "{학습 조건 [노드의 최소 데이터 수 | 트리의 최대 깊이] 을 (10) 으로 바꾸기}"
   set_decisiontree_tree:
+    template: "{학습한 트리 [열기 | 닫기]}"
   set_svm_option:
+    template: "{학습 조건 [C] 을 (10) 으로 바꾸기}"
   set_kernel_linear:
+    template: "{커널을 선형으로 바꾸기}"
   set_kernel_option:
+    template: "{커널을 [다항식 | RBF] (으)로 바꾸고 undefined 를 (10) (으)로 정하기}"
   is_result_1:
+    template: "<undefined (10) 의 분류 결과가 undefined 인가?>"
   is_result_2:
+    template: "<undefined (10) undefined (10) 의 분류 결과가 %5 인가?>"
   is_result_3:
+    template: "<undefined (10) undefined (10) %5 %6 의 분류 결과가 %7 인가?>"
   is_result_4:
+    template: "<undefined (10) undefined (10) %5 %6 %7 %8 의 분류 결과가 %9 인가?>"
   is_result_5:
+    template: "<undefined (10) undefined (10) %5 %6 %7 %8 %9 %10 의 분류 결과가 %11 인가?>"
   is_result_6:
+    template: "<undefined (10) undefined (10) %5 %6 %7 %8 %9 %10 %11 %12 의 분류 결과가
+      %13 인가?>"
   get_predict_1:
+    template: "(undefined (10) 의 분류 결과)"
   get_predict_2:
+    template: "(undefined (10) undefined (10) 의 분류 결과)"
   get_predict_3:
+    template: "(undefined (10) undefined (10) %5 %6 의 분류 결과)"
   get_predict_4:
+    template: "(undefined (10) undefined (10) %5 %6 %7 %8 의 분류 결과)"
   get_predict_5:
+    template: "(undefined (10) undefined (10) %5 %6 %7 %8 %9 %10 의 분류 결과)"
   get_predict_6:
+    template: "(undefined (10) undefined (10) %5 %6 %7 %8 %9 %10 %11 %12 의 분류 결과)"
   get_result_info:
+    template: "(모델의 [정확도 | F1 | 정밀도 | 재현율])"
   set_cluster_option_k:
+    template: "{군집을 (10) 개로 바꾸기}"
   set_cluster_option_centroids:
+    template: "{중심점 기준을 [가장 먼 거리 | 무작위] 로 바꾸기}"
   get_cluster_centriod_count:
+    template: "(군집 개수)"
   get_cluster_centriod_value:
+    template: "(군집 (10) 중심점의 undefined 값)"
   get_cluster_centriod_index_1:
+    template: "(undefined (10)의 군집)"
   get_cluster_centriod_index_2:
+    template: "(undefined (10) undefined (10)의 군집)"
   get_cluster_centriod_index_3:
+    template: "(undefined (10) undefined (10) %5 %6의 군집)"
   get_cluster_centriod_index_4:
+    template: "(undefined (10) undefined (10) %5 %6 %7 %8의 군집)"
   get_cluster_centriod_index_5:
+    template: "(undefined (10) undefined (10) %5 %6 %7 %8 %9 %10의 군집)"
   get_cluster_centriod_index_6:
+    template: "(undefined (10) undefined (10) %5 %6 %7 %8 %9 %10 %11 %12의 군집)"
   set_number_learning_option_k:
+    template: "{이웃을 (10) 개로 바꾸기}"
   get_number_learning_predict_1:
+    template: "(undefined (10) 의 분류 결과)"
   get_number_learning_predict_2:
+    template: "(undefined (10) undefined (10)의 분류 결과)"
   get_number_learning_predict_3:
+    template: "(undefined (10) undefined (10) %5 %6 의 분류 결과)"
   get_number_learning_predict_4:
+    template: "(undefined (10) undefined (10) %5 %6 %7 %8 의 분류 결과)"
   get_number_learning_predict_5:
+    template: "(undefined (10) undefined (10) %5 %6 %7 %8 %9 %10 의 분류 결과)"
   get_number_learning_predict_6:
+    template: "(undefined (10) undefined (10) %5 %6 %7 %8 %9 %10 %11 %12 의 분류 결과)"
   get_number_learning_predict_param_1:
+    template: "(undefined (10) 의 undefined 에 대한 [이웃 개수])"
   get_number_learning_predict_param_2:
+    template: "(undefined (10) undefined (10) 의 %5 에 대한 %6)"
   get_number_learning_predict_param_3:
+    template: "(undefined (10) undefined (10) %5 %6 의 %7 에 대한 %8)"
   get_number_learning_predict_param_4:
+    template: "(undefined (10) undefined (10) %5 %6 %7 %8 의 %9 에 대한 %10)"
   get_number_learning_predict_param_5:
+    template: "(undefined (10) undefined (10) %5 %6 %7 %8 %9 %10 의 %11 에 대한 %12)"
   get_number_learning_predict_param_6:
+    template: "(undefined (10) undefined (10) %5 %6 %7 %8 %9 %10 %11 %12 의 %13 에 대한
+      %14)"
   is_number_learning_group_1:
+    template: "<undefined (10) 의 분류 결과가 undefined 인가?>"
   is_number_learning_group_2:
+    template: "<undefined (10) undefined (10) 의 분류 결과가 %5 인가?>"
   is_number_learning_group_3:
+    template: "<undefined (10) undefined (10) %5 %6 의 분류 결과가 %7 인가?>"
   is_number_learning_group_4:
+    template: "<undefined (10) undefined (10) %5 %6 %7 %8 의 분류 결과가 %9 인가?>"
   is_number_learning_group_5:
+    template: "<undefined (10) undefined (10) %5 %6 %7 %8 %9 %10 의 분류 결과가 %11 인가?>"
   is_number_learning_group_6:
+    template: "<undefined (10) undefined (10) %5 %6 %7 %8 %9 %10 %11 %12 의 분류 결과가
+      %13 인가?>"
   insert_data_for_test:
+    template: "{학습한 모델로 분류하기}"
   video_capture_for_image_test:
+    template: "{비디오 화면을 학습한 모델로 분류 [시작하기 | 중지하기]}"
   insert_text_block_for_test:
+    template: "{(10) 을(를) 학습한 모델로 분류하기}"
   test_result:
+    template: "(분류 결과)"
   accuracy_of_result:
+    template: "(undefined에 대한 신뢰도)"
   is_group:
+    template: "<분류 결과가 undefined 인가?>"
   audio_title:
+    template: 오디오 감지
   check_microphone:
+    template: "<마이크가 연결되었는가?>"
   get_microphone_volume:
+    template: "(마이크 소리 크기)"
   speech_to_text_title:
+    template: 음성 인식
   speech_to_text_convert:
+    template: "{[한국어 | 영어 | 일본어] 음성 인식하기}"
   timed_speech_to_text_convert:
+    template: "{(10) 초 동안 [한국어 | 영어 | 일본어] 음성 인식하기}"
   set_visible_speech_to_text:
+    template: "{인식한 음성 [보이기 | 숨기기]}"
   speech_to_text_get_value:
+    template: "(음성을 문자로 바꾼 값)"
   tts_title:
+    template: 읽어주기
   read_text:
+    template: "{(10) 읽어주기}"
   read_text_wait_with_block:
+    template: "{(10) 읽어주고 기다리기}"
   set_tts_property:
+    template: "{[여성 | 남성 | 친절한 | 감미로운 | 울리는 | 장난스러운 | 앙증맞은 | 마녀 | 악마 | 야옹이 | 멍멍이]
+      목소리를 [매우 느린 | 느린 | 보통 | 빠른 | 매우 빠른] 속도 [매우 낮은 | 낮은 | 보통 | 높은 | 매우 높은] 음높이로 설정하기}"
   translate_title:
+    template: 번역
   get_translated_string:
+    template: "([한국어 | 영어 | 일본어 | 중국어간체 | 중국어번체 | 스페인어 | 프랑스어 | 독일어 | 러시아어 | 포르투갈어
+      | 태국어 | 베트남 | 인도네시아어 | 힌디어] (10) 을(를) undefined로 번역하기)"
   check_language:
+    template: "((10)의 언어)"
   video_title:
+    template: 비디오 감지
   video_draw_webcam:
+    template: "{비디오 화면 [보이기 | 숨기기]}"
   video_change_cam:
+    template: "{undefined 카메라로 바꾸기}"
   video_check_webcam:
+    template: "<비디오가 연결되었는가?>"
   video_flip_camera:
+    template: "{비디오 화면 [좌우 | 상하] 뒤집기}"
   video_set_camera_opacity_option:
+    template: "{비디오 투명도 효과를 (10) 으로 정하기}"
   video_motion_value:
+    template: "([자신 | 실행 화면] 에서 감지한 [움직임 | 좌우방향 | 상하방향] 값)"
   video_toggle_model:
+    template: "{[사람 | 얼굴 | 사물] 인식 [시작하기 | 중지하기]}"
   video_is_model_loaded:
+    template: "<[사람 | 얼굴 | 사물] 인식이 되었는가?>"
   video_object_detected:
+    template: "<사물 중 undefined (이)가 인식되었는가?>"
   video_number_detect:
+    template: "(인식된 [사람 | 얼굴 | 사물] 의 수)"
   video_toggle_ind:
+    template: "{인식된 [사람 | 얼굴 | 사물] [보이기 | 숨기기]}"
   video_body_part_coord:
+    template: "([1 | 2 | 3 | 4] 번째 사람의 [얼굴 | 목 | 왼쪽 눈 | 오른쪽 눈 | 왼쪽 귀 | 오른쪽 귀 | 왼쪽
+      어깨 | 오른쪽 어깨 | 왼쪽 팔꿈치 | 오른쪽 팔꿈치 | 왼쪽 손목 | 오른쪽 손목 | 왼쪽 엉덩이 | 오른쪽 엉덩이 | 왼쪽 무릎 |
+      오른쪽 무릎 | 왼쪽 발목 | 오른쪽 발목] 의 [x | y] 좌표)"
   video_face_part_coord:
+    template: "([1 | 2 | 3 | 4] 번째 얼굴의 [왼쪽 눈 | 오른쪽 눈 | 코 | 왼쪽 입꼬리 | 오른쪽 입꼬리 | 윗 입술
+      | 아랫 입술] 의 [x | y] 좌표)"
   video_detected_face_info:
+    template: "([1 | 2 | 3 | 4] 번째 얼굴의 [성별 | 나이 | 감정])"
   media_pipe_title:
+    template: 비디오 감지
   media_pipe_video_screen:
+    template: "{비디오 화면 [보이기 | 숨기기]}"
   media_pipe_switch_camera:
+    template: "{undefined 카메라로 바꾸기}"
   check_connected_camera:
+    template: "<카메라가 연결되었는가?>"
   media_pipe_flip_camera:
+    template: "{비디오 화면 [좌우 | 상하] 뒤집기}"
   media_pipe_set_opacity_camera:
+    template: "{비디오 투명도 효과를 (10) 으로 정하기}"
   media_pipe_motion_value:
+    template: "([자신 | 실행 화면] 에서 감지한 [움직임 | 좌우방향 | 상하방향] 값)"
   hand_detection_title:
+    template: 손 인식
   when_hand_detection:
+    template: "{손을 인식했을 때}"
   hand_detection:
+    template: "{손 인식 [시작하기 | 중지하기]}"
   draw_detected_hand:
+    template: "{인식한 손 [보이기 | 숨기기]}"
   check_detected_hand:
+    template: "<손을 인식했는가?>"
   count_detected_hand:
+    template: "(인식한 손의 수)"
   locate_to_hand:
+    template: "{[1 | 2] 번째 손의 [엄지 | 검지 | 중지 | 약지 | 소지 | 손목] undefined (으)로 이동하기}"
   locate_time_to_hand:
+    template: "{(10) 초 동안 [1 | 2] 번째 손의 [엄지 | 검지 | 중지 | 약지 | 소지 | 손목] undefined (으)로
+      이동하기 %5}"
   axis_detected_hand:
+    template: "([1 | 2] 번째 손의 [엄지 | 검지 | 중지 | 약지 | 소지 | 손목] undefined 의 [x | y] 좌표)"
   is_which_hand:
+    template: "<[1 | 2] 번째 손이 [오른손 | 왼손] 인가?>"
   get_which_hand:
+    template: "([1 | 2] 번째 손)"
   is_which_gesture:
+    template: "<[1 | 2] 번째 손의 모양이 [쥔 손 | 편 손 | 가리킨 손 | 엄지 아래로 | 엄지 위로 | 브이 사인 | 사랑해]
+      인가?>"
   get_which_gesture:
+    template: "([1 | 2] 번째 손의 모양)"
   pose_landmarker_title:
+    template: 사람 인식
   when_pose_landmarker:
+    template: "{사람을 인식했을 때}"
   pose_landmarker:
+    template: "{사람 인식 [시작하기 | 중지하기]}"
   draw_detected_pose:
+    template: "{인식한 사람 [보이기 | 숨기기]}"
   check_detected_pose:
+    template: "<사람을 인식했는가?>"
   count_detected_pose:
+    template: "(인식한 사람의 수)"
   locate_to_pose:
+    template: "{[1 | 2 | 3 | 4] 번째의 사람의 [코 | 왼쪽 눈 안쪽 | 왼쪽 눈 | 왼쪽 눈 바깥쪽 | 오른쪽 눈 안쪽
+      | 오른쪽 눈 | 오른쪽 눈 바깥쪽 | 왼쪽 귀 | 오른쪽 귀 | 왼쪽 입꼬리 | 오른쪽 입꼬리 | 왼쪽 어깨 | 오른쪽 어깨 | 왼쪽
+      팔꿈치 | 오른쪽 팔꿈치 | 왼쪽 손목 | 오른쪽 손목 | 왼쪽 소지 | 오른쪽 소지 | 왼쪽 검지 | 오른쪽 검지 | 왼쪽 엄지 | 오른쪽
+      엄지 | 왼쪽 엉덩이 | 오른쪽 엉덩이 | 왼쪽 무릎 | 오른쪽 무릎 | 왼쪽 발목 | 오른쪽 발목 | 왼쪽 발꿈치 | 오른쪽 발꿈치 |
+      왼쪽 발끝 | 오른쪽 발끝] (으)로 이동하기}"
   locate_time_to_pose:
+    template: "{(10) 초 동안 [1 | 2 | 3 | 4] 번째의 사람의 [코 | 왼쪽 눈 안쪽 | 왼쪽 눈 | 왼쪽 눈 바깥쪽 |
+      오른쪽 눈 안쪽 | 오른쪽 눈 | 오른쪽 눈 바깥쪽 | 왼쪽 귀 | 오른쪽 귀 | 왼쪽 입꼬리 | 오른쪽 입꼬리 | 왼쪽 어깨 | 오른쪽
+      어깨 | 왼쪽 팔꿈치 | 오른쪽 팔꿈치 | 왼쪽 손목 | 오른쪽 손목 | 왼쪽 소지 | 오른쪽 소지 | 왼쪽 검지 | 오른쪽 검지 | 왼쪽
+      엄지 | 오른쪽 엄지 | 왼쪽 엉덩이 | 오른쪽 엉덩이 | 왼쪽 무릎 | 오른쪽 무릎 | 왼쪽 발목 | 오른쪽 발목 | 왼쪽 발꿈치 |
+      오른쪽 발꿈치 | 왼쪽 발끝 | 오른쪽 발끝] (으)로 이동하기}"
   axis_detected_pose:
+    template: "([1 | 2 | 3 | 4] 번째 사람의 [코 | 왼쪽 눈 안쪽 | 왼쪽 눈 | 왼쪽 눈 바깥쪽 | 오른쪽 눈 안쪽 |
+      오른쪽 눈 | 오른쪽 눈 바깥쪽 | 왼쪽 귀 | 오른쪽 귀 | 왼쪽 입꼬리 | 오른쪽 입꼬리 | 왼쪽 어깨 | 오른쪽 어깨 | 왼쪽 팔꿈치
+      | 오른쪽 팔꿈치 | 왼쪽 손목 | 오른쪽 손목 | 왼쪽 소지 | 오른쪽 소지 | 왼쪽 검지 | 오른쪽 검지 | 왼쪽 엄지 | 오른쪽 엄지
+      | 왼쪽 엉덩이 | 오른쪽 엉덩이 | 왼쪽 무릎 | 오른쪽 무릎 | 왼쪽 발목 | 오른쪽 발목 | 왼쪽 발꿈치 | 오른쪽 발꿈치 | 왼쪽
+      발끝 | 오른쪽 발끝] 의 [x | y] 좌표)"
   face_landmarker_title:
+    template: 얼굴 인식
   when_face_landmarker:
+    template: "{얼굴을 인식했을 때}"
   face_landmarker:
+    template: "{얼굴 인식 [시작하기 | 중지하기]}"
   draw_detected_face:
+    template: "{인식한 얼굴 [보이기 | 숨기기]}"
   check_detected_face:
+    template: "<얼굴을 인식했는가?>"
   count_detected_face:
+    template: "(인식한 얼굴의 수)"
   locate_to_face:
+    template: "{[1 | 2 | 3 | 4] 번째의 얼굴의 [왼쪽 눈 | 오른쪽 눈 | 코 | 왼쪽 입꼬리 | 오른쪽 입꼬리 | 윗 입술
+      | 아랫 입술] (으)로 이동하기}"
   locate_time_to_face:
+    template: "{(10) 초 동안 [1 | 2 | 3 | 4] 번째의 얼굴의 [왼쪽 눈 | 오른쪽 눈 | 코 | 왼쪽 입꼬리 | 오른쪽
+      입꼬리 | 윗 입술 | 아랫 입술] (으)로 이동하기}"
   check_detected_gender:
+    template: "<[1 | 2 | 3 | 4] 번째 얼굴의 성별이 [여성 | 남성] 인가?>"
   check_compare_age:
+    template: "<[1 | 2 | 3 | 4] 번째 얼굴의 나이 [= | != | > | < | ≥ | ≤] (10) 인가?>"
   check_detected_emotion:
+    template: "<[1 | 2 | 3 | 4] 번째 얼굴의 감정이 [분노 | 혐오 | 두려움 | 행복 | 무표정 | 슬픔 | 놀람] 인가?>"
   axis_detected_face:
+    template: "([1 | 2 | 3 | 4] 번째 얼굴의 [왼쪽 눈 | 오른쪽 눈 | 코 | 왼쪽 입꼬리 | 오른쪽 입꼬리 | 윗 입술
+      | 아랫 입술] 의 [x | y] 좌표)"
   get_detected_face_value:
+    template: "([1 | 2 | 3 | 4] 번째 얼굴의 [성별 | 나이 | 감정])"
   object_detector_title:
+    template: 사물 인식
   when_object_detector:
+    template: "{사물을 인식했을 때}"
   object_detector:
+    template: "{사물 인식 [시작하기 | 중지하기]}"
   draw_detected_object:
+    template: "{인식한 사물 [보이기 | 숨기기]}"
   check_detected_object:
+    template: "<사물을 인식했는가?>"
   count_detected_object:
+    template: "(인식한 사물의 수)"
   is_detected_among_objects:
+    template: "<사물 중 undefined 을(를) 인식했는가?>"
 expansion:
   expansionBlockAddButton:
+    template: 확장 블록 불러오기
   weather_title:
+    template: 날씨
   check_weather:
+    template: "<[어제 | 오늘 | 내일 | 모레 | 3일 후 | 4일 후 | 5일 후 | 6일 후] [서울 | 강원 | 경기 | 경남
+      | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남 | 전북 | 제주 | 충남 | 충북] 의 날씨가 [맑음
+      | 구름조금 | 구름많음 | 흐림 | 비 | 진눈깨비 | 눈]인가?>"
   check_finedust:
+    template: "<현재 [서울 | 강원 | 경기 | 경남 | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남
+      | 전북 | 제주 | 충남 | 충북] 의 미세먼지 등급이 [좋음 | 보통 | 나쁨 | 매우나쁨]인가?>"
   get_weather_data:
+    template: "([어제 | 오늘 | 내일 | 모레 | 3일 후 | 4일 후 | 5일 후 | 6일 후] [서울 | 강원 | 경기 | 경남
+      | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남 | 전북 | 제주 | 충남 | 충북] 의 [최저기온(℃)
+      | 최고기온(℃) | 습도(%) | 강수량(mm) | 강수확률(%) | 풍속(m/s)])"
   get_current_weather_data:
+    template: "(현재 [서울 | 강원 | 경기 | 경남 | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남
+      | 전북 | 제주 | 충남 | 충북] 의 [기온(℃) | 미세먼지농도(㎍)])"
   get_today_temperature:
+    template: "(오늘 [서울 | 강원 | 경기 | 경남 | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남
+      | 전북 | 제주 | 충남 | 충북]의 [00 | 03 | 06 | 09 | 12 | 15 | 18 | 21]시 기온)"
   check_city_weather:
+    template: "<[어제 | 오늘 | 내일 | 모레 | 3일 후 | 4일 후 | 5일 후 | 6일 후] [서울 | 강원 | 경기 | 경남
+      | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남 | 전북 | 제주 | 충남 | 충북] undefined의
+      날씨가 [맑음 | 구름조금 | 구름많음 | 흐림 | 비 | 진눈깨비 | 눈]인가?>"
   check_city_finedust:
+    template: "<현재 [서울 | 강원 | 경기 | 경남 | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남
+      | 전북 | 제주 | 충남 | 충북] undefined 의 미세먼지 등급이 [좋음 | 보통 | 나쁨 | 매우나쁨]인가?>"
   get_city_weather_data:
+    template: "([어제 | 오늘 | 내일 | 모레 | 3일 후 | 4일 후 | 5일 후 | 6일 후] [서울 | 강원 | 경기 | 경남
+      | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남 | 전북 | 제주 | 충남 | 충북] undefined
+      의 [최저기온(℃) | 최고기온(℃) | 습도(%) | 강수량(mm) | 강수확률(%) | 풍속(m/s)])"
   get_current_city_weather_data:
+    template: "(현재 [서울 | 강원 | 경기 | 경남 | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남
+      | 전북 | 제주 | 충남 | 충북] undefined 의 [기온(℃) | 미세먼지농도(㎍)])"
   get_today_city_temperature:
+    template: "(오늘 [서울 | 강원 | 경기 | 경남 | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남
+      | 전북 | 제주 | 충남 | 충북] undefined의 [00 | 03 | 06 | 09 | 12 | 15 | 18 | 21]시 기온)"
   festival_title:
+    template: 행사
   count_festival:
+    template: "([서울 | 강원 | 경기 | 경남 | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남 |
+      전북 | 제주 | 충남 | 충북] [1월 | 2월 | 3월 | 4월 | 5월 | 6월 | 7월 | 8월 | 9월 | 10월 | 11월 |
+      12월] 행사의 수)"
   get_festival_info:
+    template: "([서울 | 강원 | 경기 | 경남 | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남 |
+      전북 | 제주 | 충남 | 충북] [1월 | 2월 | 3월 | 4월 | 5월 | 6월 | 7월 | 8월 | 9월 | 10월 | 11월 |
+      12월] 행사 (10) 번째 항목의 [제목 | 지역 | 시작일 | 종료일 | 주소 | 개요 | 홈페이지])"
   behaviorConductDisaster_title:
+    template: 자연재난 국민행동요령
   count_disaster_behavior:
+    template: "([태풍 | 홍수 | 호우 | 강풍 | 대설 | 한파 | 풍랑 | 황사 | 폭염 | 가뭄 | 지진 | 해일 | 산사태]
+      undefined 해야할 행동요령 수)"
   get_disaster_behavior:
+    template: "(자연재난[태풍 | 홍수 | 호우 | 강풍 | 대설 | 한파 | 풍랑 | 황사 | 폭염 | 가뭄 | 지진 | 해일 | 산사태]
+      undefined 해야할 행동요령 (10) 번째 항목)"
   behaviorConductLifeSafety_title:
+    template: 생활안전 국민행동요령
   count_lifeSafety_behavior:
+    template: "([응급처치 | 심폐소생술 | 소화기사용법 | 소화전사용법 | 식중독 | 산행안전 | 실종유괴 | 성폭력 | 학교 폭력
+      | 가정 폭력 | 억류 및 납치 | 교통사고 | 승강기 안전사고 | 미세먼지] 에서 undefined 방법의 수)"
   get_lifeSafety_behavior:
+    template: "([응급처치 | 심폐소생술 | 소화기사용법 | 소화전사용법 | 식중독 | 산행안전 | 실종유괴 | 성폭력 | 학교 폭력
+      | 가정 폭력 | 억류 및 납치 | 교통사고 | 승강기 안전사고 | 미세먼지] 에서 undefined 방법 (10) 번째 항목)"
