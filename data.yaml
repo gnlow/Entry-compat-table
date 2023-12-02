@@ -11,19 +11,6 @@ start:
   when_scene_start:
   start_scene:
   start_neighbor_scene:
-  # check_object_property:
-  # check_block_execution:
-  # switch_scope:
-  # is_answer_submited:
-  # check_lecture_goal:
-  # check_variable_by_name:
-  # show_prompt:
-  # check_goal_success:
-  # positive_number:
-  # negative_number:
-  # wildcard_string:
-  # wildcard_boolean:
-  # register_score:
 flow:
   wait_second:
   repeat_basic:
