@@ -12,15 +12,15 @@ start:
   when_object_click_canceled:
     template: "{오브젝트 클릭을 해제했을 때}"
   when_message_cast:
-    template: "{[DropdownDynamic] 신호를 받았을 때}"
+    template: "{[신호] 신호를 받았을 때}"
   message_cast:
-    template: "{[DropdownDynamic] 신호 보내기}"
+    template: "{[신호] 신호 보내기}"
   message_cast_wait:
-    template: "{[DropdownDynamic] 신호 보내고 기다리기}"
+    template: "{[신호] 신호 보내고 기다리기}"
   when_scene_start:
     template: "{장면이 시작되었을 때}"
   start_scene:
-    template: "{[DropdownDynamic] 시작하기}"
+    template: "{[장면 1] 시작하기}"
   start_neighbor_scene:
     template: "{[다음 | 이전] 장면 시작하기}"
   check_object_property:
@@ -73,7 +73,7 @@ flow:
   when_clone_start:
     template: "{복제본이 처음 생성되었을때}"
   create_clone:
-    template: "{[DropdownDynamic] 의 복제본 만들기}"
+    template: "{[자신] 의 복제본 만들기}"
   delete_clone:
     template: "{이 복제본 삭제하기}"
   remove_all_clones:
@@ -98,9 +98,9 @@ moving:
   locate_xy_time:
     template: "{(10) 초 동안 x: (10) y: (10) 위치로 이동하기}"
   locate:
-    template: "{[DropdownDynamic] 위치로 이동하기}"
+    template: "{[엔트리봇] 위치로 이동하기}"
   locate_object_time:
-    template: "{(10) 초 동안 [DropdownDynamic] 위치로 이동하기}"
+    template: "{(10) 초 동안 [엔트리봇] 위치로 이동하기}"
   rotate_relative:
     template: "{방향을 (10) 만큼 회전하기}"
   direction_relative:
@@ -114,7 +114,7 @@ moving:
   direction_absolute:
     template: "{이동 방향을 (10) (으)로 정하기}"
   see_angle_object:
-    template: "{[DropdownDynamic] 쪽 바라보기}"
+    template: "{[엔트리봇] 쪽 바라보기}"
   move_to_angle:
     template: "{(10) 방향으로 (10) 만큼 움직이기}"
 looks:
@@ -177,7 +177,7 @@ brush:
     template: "{모든 붓 지우기}"
 text:
   text_read:
-    template: "(글상자 [DropdownDynamic]의 내용)"
+    template: "(글상자 [자신]의 내용)"
   text_write:
     template: "{(10) 라고 글쓰기}"
   text_append:
@@ -187,7 +187,7 @@ text:
   text_change_effect:
     template: "{텍스트에 [가로줄 | 밑줄 | 이탤릭 | 볼드] 효과 [켜기 | 끄기]}"
   text_change_font:
-    template: "{글씨체를 [DropdownDynamic] 로 변경}"
+    template: "{글씨체를 [바탕체] 로 변경}"
   text_change_font_color:
     template: "{글씨색을 (10) 로 변경}"
   text_change_bg_color:
@@ -229,7 +229,7 @@ judgement:
   is_press_some_key:
     template: "<[next] 키가 눌러져 있는가?>"
   reach_something:
-    template: "<[DropdownDynamic] 에 닿았는가?>"
+    template: "<[마우스포인터] 에 닿았는가?>"
   is_type:
     template: "<(10) (이)가 [숫자 | 영문 | 한글] 인가?>"
   boolean_basic_operator:
@@ -248,7 +248,7 @@ calc:
   coordinate_mouse:
     template: "(마우스 [x | y] 좌표)"
   coordinate_object:
-    template: "([DropdownDynamic] 의 [x 좌푯값 | y 좌푯값 | 방향 | 이동방향 | 크기 | 모양 번호 | 모양 이름])"
+    template: "([엔트리봇] 의 [x 좌푯값 | y 좌푯값 | 방향 | 이동방향 | 크기 | 모양 번호 | 모양 이름])"
   get_sound_volume:
     template: "(소릿값)"
   quotient_and_mod:
@@ -265,9 +265,9 @@ calc:
   get_date:
     template: "(현재 [연도 | 월 | 일 | 요일 | 시각(시) | 시각(분) | 시각(초)])"
   distance_something:
-    template: "([DropdownDynamic] 까지의 거리)"
+    template: "([엔트리봇] 까지의 거리)"
   get_sound_duration:
-    template: "([DropdownDynamic] 소리의 길이)"
+    template: "([강아지 짖는 소리] 소리의 길이)"
   get_user_name:
     template: "(아이디)"
   get_nickname:
@@ -291,7 +291,7 @@ calc:
   change_string_case:
     template: "((10) 의 [대문자 | 소문자] %5)"
   get_block_count:
-    template: "([DropdownDynamic] 의 블록 수)"
+    template: "([모든] 의 블록 수)"
   change_rgb_to_hex:
     template: "(R:(10)G:(10)B:(10)의 HEX 값)"
   change_hex_to_rgb:
@@ -308,33 +308,33 @@ variable:
   set_visible_answer:
     template: "{대답 [보이기 | 숨기기]}"
   get_variable:
-    template: "([DropdownDynamic] 값)"
+    template: "([변수] 값)"
   change_variable:
-    template: "{[DropdownDynamic] 에 (10) 만큼 더하기}"
+    template: "{[변수] 에 (10) 만큼 더하기}"
   set_variable:
-    template: "{[DropdownDynamic] 를 (10) (으)로 정하기}"
+    template: "{[변수] 를 (10) (으)로 정하기}"
   show_variable:
-    template: "{변수 [DropdownDynamic] 보이기}"
+    template: "{변수 [변수] 보이기}"
   hide_variable:
-    template: "{변수 [DropdownDynamic] 숨기기}"
+    template: "{변수 [변수] 숨기기}"
   value_of_index_from_list:
-    template: "([DropdownDynamic] 의 (10) %5)"
+    template: "([리스트] 의 (10) %5)"
   add_value_to_list:
-    template: "{(10) 항목을 [DropdownDynamic] 에 추가하기}"
+    template: "{(10) 항목을 [리스트] 에 추가하기}"
   remove_value_from_list:
-    template: "{(10) 번째 항목을 [DropdownDynamic] 에서 삭제하기}"
+    template: "{(10) 번째 항목을 [리스트] 에서 삭제하기}"
   insert_value_to_list:
-    template: "{(10) 을(를) [DropdownDynamic] 의 (10) 번째에 넣기}"
+    template: "{(10) 을(를) [리스트] 의 (10) 번째에 넣기}"
   change_value_list_index:
-    template: "{[DropdownDynamic]   (10) 번째 항목을 (10) (으)로 바꾸기}"
+    template: "{[리스트]   (10) 번째 항목을 (10) (으)로 바꾸기}"
   length_of_list:
-    template: "([DropdownDynamic] 항목 수)"
+    template: "([리스트] 항목 수)"
   is_included_in_list:
-    template: "<[DropdownDynamic] 에 (10) %5>"
+    template: "<[리스트] 에 (10) %5>"
   show_list:
-    template: "{리스트 [DropdownDynamic] 보이기}"
+    template: "{리스트 [리스트] 보이기}"
   hide_list:
-    template: "{리스트 [DropdownDynamic] 숨기기}"
+    template: "{리스트 [리스트] 숨기기}"
 func:
   functionAddButton:
     template: 함수 만들기
@@ -350,33 +350,33 @@ analysis:
   analizyDataAddButton:
     template: 테이블 불러오기
   append_row_to_table:
-    template: "{테이블 [DropdownDynamic]에 [행 | 열] 추가하기}"
+    template: "{테이블 [테이블]에 [행 | 열] 추가하기}"
   insert_row_to_table:
-    template: "{테이블 [DropdownDynamic] (10) 번째에 [행 | 열] 추가하기}"
+    template: "{테이블 [테이블] (10) 번째에 [행 | 열] 추가하기}"
   delete_row_from_table:
-    template: "{테이블 [DropdownDynamic] (10)번째 [행 | 열] 삭제하기}"
+    template: "{테이블 [테이블] (10)번째 [행 | 열] 삭제하기}"
   set_value_from_table:
-    template: "{테이블 [DropdownDynamic] (10)번째 행의 (10)을(를) (10)(으)로 바꾸기 %5}"
+    template: "{테이블 [테이블] (10)번째 행의 (10)을(를) (10)(으)로 바꾸기 %5}"
   save_current_table:
-    template: "{테이블 [DropdownDynamic] 을(를) 현재 상태로 남기기}"
+    template: "{테이블 [테이블] 을(를) 현재 상태로 남기기}"
   get_table_count:
-    template: "(테이블 [DropdownDynamic]의 [행 | 열] 개수)"
+    template: "(테이블 [테이블]의 [행 | 열] 개수)"
   get_value_from_table:
-    template: "(테이블 [DropdownDynamic] (10)번째 행의 (10) 값)"
+    template: "(테이블 [테이블] (10)번째 행의 (10) 값)"
   get_value_from_last_row:
-    template: "(테이블 [DropdownDynamic] 마지막 행의 (10) 값)"
+    template: "(테이블 [테이블] 마지막 행의 (10) 값)"
   calc_values_from_table:
-    template: "(테이블 [DropdownDynamic] (10)의 [합 | 최대 | 최소 | 평균 | 표준편차 | 중앙값])"
+    template: "(테이블 [테이블] (10)의 [합 | 최대 | 최소 | 평균 | 표준편차 | 중앙값])"
   open_table:
-    template: "{테이블 [DropdownDynamic] 창 열기}"
+    template: "{테이블 [테이블] 창 열기}"
   open_table_wait:
-    template: "{테이블 [DropdownDynamic] 창을 (10) 초 동안 열기}"
+    template: "{테이블 [테이블] 창을 (10) 초 동안 열기}"
   open_table_chart:
-    template: "{테이블 [DropdownDynamic]의 [DropdownDynamic] 차트 창 열기}"
+    template: "{테이블 [테이블]의 [??] 차트 창 열기}"
   close_table_chart:
     template: "{테이블 차트 창 닫기}"
   get_coefficient:
-    template: "(테이블 [DropdownDynamic] (10)과(와) (10)의 상관계수)"
+    template: "(테이블 [테이블] (10)과(와) (10)의 상관계수)"
 ai_utilize:
   aiUtilizeBlockAddButton:
     template: 인공지능 블록 불러오기
@@ -430,7 +430,7 @@ ai_utilize:
   set_logistic_regression_optimizer:
     template: "{최적화 알고리즘을 [Adam | SGD] (으)로 바꾸기}"
   get_logistic_regression_probability_1:
-    template: "([TextDynamic] (10) 의 [DropdownDynamic] 에 대한 확률)"
+    template: "([TextDynamic] (10) 의 [??] 에 대한 확률)"
   get_logistic_regression_probability_2:
     template: "([TextDynamic] (10) [TextDynamic] (10) 의 %5 에 대한 확률)"
   get_logistic_regression_probability_3:
@@ -452,9 +452,9 @@ ai_utilize:
   set_kernel_linear:
     template: "{커널을 선형으로 바꾸기}"
   set_kernel_option:
-    template: "{커널을 [다항식 | RBF] (으)로 바꾸고 [DropdownDynamic] 를 (10) (으)로 정하기}"
+    template: "{커널을 [다항식 | RBF] (으)로 바꾸고 [??] 를 (10) (으)로 정하기}"
   is_result_1:
-    template: "<[TextDynamic] (10) 의 분류 결과가 [DropdownDynamic] 인가?>"
+    template: "<[TextDynamic] (10) 의 분류 결과가 [??] 인가?>"
   is_result_2:
     template: "<[TextDynamic] (10) [TextDynamic] (10) 의 분류 결과가 %5 인가?>"
   is_result_3:
@@ -489,7 +489,7 @@ ai_utilize:
   get_cluster_centriod_count:
     template: "(군집 개수)"
   get_cluster_centriod_value:
-    template: "(군집 (10) 중심점의 [DropdownDynamic] 값)"
+    template: "(군집 (10) 중심점의 [??] 값)"
   get_cluster_centriod_index_1:
     template: "([TextDynamic] (10)의 군집)"
   get_cluster_centriod_index_2:
@@ -519,7 +519,7 @@ ai_utilize:
     template: "([TextDynamic] (10) [TextDynamic] (10) %5 %6 %7 %8 %9 %10 %11 %12 의
       분류 결과)"
   get_number_learning_predict_param_1:
-    template: "([TextDynamic] (10) 의 [DropdownDynamic] 에 대한 [이웃 개수])"
+    template: "([TextDynamic] (10) 의 [??] 에 대한 [이웃 개수])"
   get_number_learning_predict_param_2:
     template: "([TextDynamic] (10) [TextDynamic] (10) 의 %5 에 대한 %6)"
   get_number_learning_predict_param_3:
@@ -533,7 +533,7 @@ ai_utilize:
     template: "([TextDynamic] (10) [TextDynamic] (10) %5 %6 %7 %8 %9 %10 %11 %12 의
       %13 에 대한 %14)"
   is_number_learning_group_1:
-    template: "<[TextDynamic] (10) 의 분류 결과가 [DropdownDynamic] 인가?>"
+    template: "<[TextDynamic] (10) 의 분류 결과가 [??] 인가?>"
   is_number_learning_group_2:
     template: "<[TextDynamic] (10) [TextDynamic] (10) 의 분류 결과가 %5 인가?>"
   is_number_learning_group_3:
@@ -555,9 +555,9 @@ ai_utilize:
   test_result:
     template: "(분류 결과)"
   accuracy_of_result:
-    template: "([DropdownDynamic]에 대한 신뢰도)"
+    template: "([??]에 대한 신뢰도)"
   is_group:
-    template: "<분류 결과가 [DropdownDynamic] 인가?>"
+    template: "<분류 결과가 [??] 인가?>"
   audio_title:
     template: 오디오 감지
   check_microphone:
@@ -587,7 +587,7 @@ ai_utilize:
     template: 번역
   get_translated_string:
     template: "([한국어 | 영어 | 일본어 | 중국어간체 | 중국어번체 | 스페인어 | 프랑스어 | 독일어 | 러시아어 | 포르투갈어
-      | 태국어 | 베트남 | 인도네시아어 | 힌디어] (10) 을(를) [DropdownDynamic]로 번역하기)"
+      | 태국어 | 베트남 | 인도네시아어 | 힌디어] (10) 을(를) [??]로 번역하기)"
   check_language:
     template: "((10)의 언어)"
   video_title:
@@ -595,7 +595,7 @@ ai_utilize:
   video_draw_webcam:
     template: "{비디오 화면 [보이기 | 숨기기]}"
   video_change_cam:
-    template: "{[DropdownDynamic] 카메라로 바꾸기}"
+    template: "{[Unspecified Device-1] 카메라로 바꾸기}"
   video_check_webcam:
     template: "<비디오가 연결되었는가?>"
   video_flip_camera:
@@ -628,7 +628,7 @@ ai_utilize:
   media_pipe_video_screen:
     template: "{비디오 화면 [보이기 | 숨기기]}"
   media_pipe_switch_camera:
-    template: "{[DropdownDynamic] 카메라로 바꾸기}"
+    template: "{[Unspecified Device-1] 카메라로 바꾸기}"
   check_connected_camera:
     template: "<카메라가 연결되었는가?>"
   media_pipe_flip_camera:
@@ -650,14 +650,12 @@ ai_utilize:
   count_detected_hand:
     template: "(인식한 손의 수)"
   locate_to_hand:
-    template: "{[1 | 2] 번째 손의 [엄지 | 검지 | 중지 | 약지 | 소지 | 손목] [DropdownDynamic] (으)로
-      이동하기}"
+    template: "{[1 | 2] 번째 손의 [엄지 | 검지 | 중지 | 약지 | 소지 | 손목] [??] (으)로 이동하기}"
   locate_time_to_hand:
-    template: "{(10) 초 동안 [1 | 2] 번째 손의 [엄지 | 검지 | 중지 | 약지 | 소지 | 손목] [DropdownDynamic]
-      (으)로 이동하기 %5}"
+    template: "{(10) 초 동안 [1 | 2] 번째 손의 [엄지 | 검지 | 중지 | 약지 | 소지 | 손목] [??] (으)로 이동하기
+      %5}"
   axis_detected_hand:
-    template: "([1 | 2] 번째 손의 [엄지 | 검지 | 중지 | 약지 | 소지 | 손목] [DropdownDynamic] 의 [x
-      | y] 좌표)"
+    template: "([1 | 2] 번째 손의 [엄지 | 검지 | 중지 | 약지 | 소지 | 손목] [??] 의 [x | y] 좌표)"
   is_which_hand:
     template: "<[1 | 2] 번째 손이 [오른손 | 왼손] 인가?>"
   get_which_hand:
@@ -764,22 +762,21 @@ expansion:
       | 전북 | 제주 | 충남 | 충북]의 [00 | 03 | 06 | 09 | 12 | 15 | 18 | 21]시 기온)"
   check_city_weather:
     template: "<[어제 | 오늘 | 내일 | 모레 | 3일 후 | 4일 후 | 5일 후 | 6일 후] [서울 | 강원 | 경기 | 경남
-      | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남 | 전북 | 제주 | 충남 | 충북] [DropdownDynamic]의
-      날씨가 [맑음 | 구름조금 | 구름많음 | 흐림 | 비 | 진눈깨비 | 눈]인가?>"
+      | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남 | 전북 | 제주 | 충남 | 충북] [??]의 날씨가
+      [맑음 | 구름조금 | 구름많음 | 흐림 | 비 | 진눈깨비 | 눈]인가?>"
   check_city_finedust:
     template: "<현재 [서울 | 강원 | 경기 | 경남 | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남
-      | 전북 | 제주 | 충남 | 충북] [DropdownDynamic] 의 미세먼지 등급이 [좋음 | 보통 | 나쁨 | 매우나쁨]인가?>"
+      | 전북 | 제주 | 충남 | 충북] [??] 의 미세먼지 등급이 [좋음 | 보통 | 나쁨 | 매우나쁨]인가?>"
   get_city_weather_data:
     template: "([어제 | 오늘 | 내일 | 모레 | 3일 후 | 4일 후 | 5일 후 | 6일 후] [서울 | 강원 | 경기 | 경남
-      | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남 | 전북 | 제주 | 충남 | 충북] [DropdownDynamic]
-      의 [최저기온(℃) | 최고기온(℃) | 습도(%) | 강수량(mm) | 강수확률(%) | 풍속(m/s)])"
+      | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남 | 전북 | 제주 | 충남 | 충북] [??] 의 [최저기온(℃)
+      | 최고기온(℃) | 습도(%) | 강수량(mm) | 강수확률(%) | 풍속(m/s)])"
   get_current_city_weather_data:
     template: "(현재 [서울 | 강원 | 경기 | 경남 | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남
-      | 전북 | 제주 | 충남 | 충북] [DropdownDynamic] 의 [기온(℃) | 미세먼지농도(㎍)])"
+      | 전북 | 제주 | 충남 | 충북] [??] 의 [기온(℃) | 미세먼지농도(㎍)])"
   get_today_city_temperature:
     template: "(오늘 [서울 | 강원 | 경기 | 경남 | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남
-      | 전북 | 제주 | 충남 | 충북] [DropdownDynamic]의 [00 | 03 | 06 | 09 | 12 | 15 | 18 |
-      21]시 기온)"
+      | 전북 | 제주 | 충남 | 충북] [??]의 [00 | 03 | 06 | 09 | 12 | 15 | 18 | 21]시 기온)"
   festival_title:
     template: 행사
   count_festival:
@@ -794,16 +791,15 @@ expansion:
     template: 자연재난 국민행동요령
   count_disaster_behavior:
     template: "([태풍 | 홍수 | 호우 | 강풍 | 대설 | 한파 | 풍랑 | 황사 | 폭염 | 가뭄 | 지진 | 해일 | 산사태]
-      [DropdownDynamic] 해야할 행동요령 수)"
+      [??] 해야할 행동요령 수)"
   get_disaster_behavior:
     template: "(자연재난[태풍 | 홍수 | 호우 | 강풍 | 대설 | 한파 | 풍랑 | 황사 | 폭염 | 가뭄 | 지진 | 해일 | 산사태]
-      [DropdownDynamic] 해야할 행동요령 (10) 번째 항목)"
+      [??] 해야할 행동요령 (10) 번째 항목)"
   behaviorConductLifeSafety_title:
     template: 생활안전 국민행동요령
   count_lifeSafety_behavior:
     template: "([응급처치 | 심폐소생술 | 소화기사용법 | 소화전사용법 | 식중독 | 산행안전 | 실종유괴 | 성폭력 | 학교 폭력
-      | 가정 폭력 | 억류 및 납치 | 교통사고 | 승강기 안전사고 | 미세먼지] 에서 [DropdownDynamic] 방법의 수)"
+      | 가정 폭력 | 억류 및 납치 | 교통사고 | 승강기 안전사고 | 미세먼지] 에서 [??] 방법의 수)"
   get_lifeSafety_behavior:
     template: "([응급처치 | 심폐소생술 | 소화기사용법 | 소화전사용법 | 식중독 | 산행안전 | 실종유괴 | 성폭력 | 학교 폭력
-      | 가정 폭력 | 억류 및 납치 | 교통사고 | 승강기 안전사고 | 미세먼지] 에서 [DropdownDynamic] 방법 (10) 번째
-      항목)"
+      | 가정 폭력 | 억류 및 납치 | 교통사고 | 승강기 안전사고 | 미세먼지] 에서 [??] 방법 (10) 번째 항목)"

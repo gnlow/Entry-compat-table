@@ -22,6 +22,8 @@ var getBlockTemplate =
                     }
                     return
 
+                case "DropdownDynamic":
+                    return `[${param.options?.[0]?.[0] || "??"}]`
                 case "Dropdown":
                     return `[${param.options.map(x => x[0]).join(" | ")}]`
 
@@ -30,11 +32,14 @@ var getBlockTemplate =
                     
                 case "Indicator":
                     return ""
+
                 case "LineBreak":
                     statements.shift(1)
                     return "{ }"
+
                 case "Keyboard":
                     return `[${param.value}]`
+
                 default:
                     //console.log("unimplemented", param.type)
                     //console.log(param)
