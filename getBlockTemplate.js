@@ -19,22 +19,25 @@ var getBlockTemplate =
                 if (param.accept == "string") {
                     return "(10)"
                 }
-            }
+            } else
             if (param.type == "Dropdown") {
                 return `[${param.options.map(x => x[0]).join(" | ")}]`
-            }
+            } else
             if (param.type == "Text") {
                 return param.text
-            }
+            } else
             if (param.type == "Indicator") {
                 return ""
-            }
+            } else
             if (param.type == "LineBreak") {
                 statements.shift(1)
                 return "{ }"
-            }
+            } else
             if (param.type == "Keyboard") {
                 return `[${param.value}]`
+            } else {
+                console.log("unimplemented", param.type)
+                console.log(param)
             }
         })
         let result = (Lang.template[blockId] || "")
@@ -71,7 +74,7 @@ var getBlockTemplate =
         return result
     }
 
-const result = Object.fromEntries(
+var result = Object.fromEntries(
     EntryStatic
         .getAllBlocks()
         .toSpliced(-1)
