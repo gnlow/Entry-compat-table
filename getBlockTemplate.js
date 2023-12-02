@@ -12,32 +12,34 @@ var getBlockTemplate =
         const statements = block.statements
 
         const params = block.params.map(param => {
-            if (param.type == "Block") {
-                if (param.accept == "boolean") {
-                    return "<참>"
-                }
-                if (param.accept == "string") {
-                    return "(10)"
-                }
-            } else
-            if (param.type == "Dropdown") {
-                return `[${param.options.map(x => x[0]).join(" | ")}]`
-            } else
-            if (param.type == "Text") {
-                return param.text
-            } else
-            if (param.type == "Indicator") {
-                return ""
-            } else
-            if (param.type == "LineBreak") {
-                statements.shift(1)
-                return "{ }"
-            } else
-            if (param.type == "Keyboard") {
-                return `[${param.value}]`
-            } else {
-                console.log("unimplemented", param.type)
-                console.log(param)
+            switch (param.type) {
+                case "Block":
+                    if (param.accept == "boolean") {
+                        return "<참>"
+                    }
+                    if (param.accept == "string") {
+                        return "(10)"
+                    }
+                    return
+
+                case "Dropdown":
+                    return `[${param.options.map(x => x[0]).join(" | ")}]`
+
+                case "Text":
+                    return param.text
+                    
+                case "Indicator":
+                    return ""
+                case "LineBreak":
+                    statements.shift(1)
+                    return "{ }"
+                case "Keyboard":
+                    return `[${param.value}]`
+                default:
+                    //console.log("unimplemented", param.type)
+                    //console.log(param)
+                    return `[${param.type}]`
+
             }
         })
         let result = (Lang.template[blockId] || "")
