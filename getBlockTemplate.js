@@ -47,7 +47,7 @@ var getBlockTemplate =
 
             }
         })
-        let result = (Lang.template[blockId] || "")
+        let result = (block.template || Lang.template[blockId] || "")
             .replace("%1", params[0])
             .replace("%2", params[1])
             .replace("%3", params[2])

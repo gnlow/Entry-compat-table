@@ -1,3 +1,4 @@
+---
 start:
   when_run_button_click:
     template: "{시작하기 버튼을 클릭했을 때}"
@@ -24,31 +25,32 @@ start:
   start_neighbor_scene:
     template: "{[다음 | 이전] 장면 시작하기}"
   check_object_property:
-    template: "{}"
+    template: "{[대상 없음] 가 [언젠가 | 지금] [x | y | 크기 | 방향 | 이동 방향 | 텍스트] [= | > | < |
+      ≥ | ≤] %5 %6}"
   check_block_execution:
-    template: "{ { }}"
+    template: "{[대상 없음] 에서 아래 블록이 [비슷하게 | 똑같이] [TextInput] 번 실행되었는가 { }}"
   switch_scope:
-    template: "{}"
+    template: "{[대상 없음] 오브젝트 기준으로 실행하기}"
   is_answer_submited:
-    template: "{}"
+    template: "{대답을 입력 받을때 까지 기다리기}"
   check_lecture_goal:
-    template: "{}"
+    template: "{목표 [TextInput] [달성 | 실패] ( [공식 | 비공식] )}"
   check_variable_by_name:
-    template: "()"
+    template: "([TextInput] 이름의 변수)"
   show_prompt:
-    template: "{}"
+    template: "{[TextInput] 안내하기}"
   check_goal_success:
-    template: "<>"
+    template: "<목표 [TextInput] 이 성공?>"
   positive_number:
-    template: "()"
+    template: "(양수)"
   negative_number:
-    template: "()"
+    template: "(음수)"
   wildcard_string:
-    template: "()"
+    template: "(*)"
   wildcard_boolean:
-    template: "<>"
+    template: "<*>"
   register_score:
-    template: "{}"
+    template: "{[TextInput]를 [TextInput]로 정하기}"
 flow:
   wait_second:
     template: "{(10) 초 기다리기}"
@@ -339,13 +341,13 @@ func:
   functionAddButton:
     template: 함수 만들기
   function_name:
-    template: ''
+    template: '함수:'
   showFunctionPropsButton:
-    template: ''
+    template: 함수 속성 보기
   set_func_variable:
-    template: "{}"
+    template: "{[대상 없음] 를 (10) (으)로 정하기}"
   get_func_variable:
-    template: "()"
+    template: "([대상 없음] 값)"
 analysis:
   analizyDataAddButton:
     template: 테이블 불러오기
