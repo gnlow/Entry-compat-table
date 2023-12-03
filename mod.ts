@@ -8,4 +8,4 @@ app.get("/", c =>
     c.html(view)
 )
 
-Deno.serve({ port: 8081 }, app.fetch)
+Deno.serve(app.fetch)
