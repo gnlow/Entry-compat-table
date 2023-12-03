@@ -32,8 +32,7 @@ for await (const { name: project } of Deno.readDir("data/")) {
                 Object.entries(v)
                     .forEach(([category, list]) =>
                         list.forEach(name_ => {
-                            name_ = name_.replace("*", "")
-                            const target = result.find(({name}) => name == name_)
+                            const target = result.find(({name}) => name == name_.replace("*", ""))
                             if (!target) {
                                 console.log("Invalid feature name", {
                                     project,
@@ -56,14 +55,18 @@ for await (const { name: project } of Deno.readDir("data/")) {
 }
 
 const meta = {} as Record<string /* type */,
-    Record<string /* featureName */,
-        { template: string }
+    Record<string /* category */,
+        Record<string /* featureName */,
+            { template: string }
+        >
     >
 >
 
 for await (const dir of Deno.readDir("meta/")) {
-    meta[dir.name.replace(".yaml", "")] = parse(await Deno.readTextFile(`meta/${dir.name}`)) as Record<string /* featureName */,
-        { template: string }
+    meta[dir.name.replace(".yaml", "")] = parse(await Deno.readTextFile(`meta/${dir.name}`)) as Record<string /* category */,
+        Record<string /* featureName */,
+            { template: string }
+        >
     >
 }
 
@@ -79,7 +82,7 @@ const gen = result.map(
     ({name: name_, category, type, stat}) => `
         <tr>
             <th scope="row">${
-                meta[type][name_]?.template
+                meta[type][category][name_]?.template
             }</th>
             ${
                 projectList.map(project => {
@@ -92,7 +95,7 @@ const gen = result.map(
                     } else {
                         return "<td x>x</td>"
                     }
-                })
+                }).join("\n")
             }
         </tr>
     `
