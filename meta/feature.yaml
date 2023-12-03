@@ -1,0 +1,7 @@
+function:
+  param:
+    template: 입력값이 있는 함수
+  local_variable:
+    template: 지역변수가 있는 함수
+  return:
+    template: 결과값이 있는 함수
