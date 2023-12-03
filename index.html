@@ -20,9 +20,15 @@
                 text-align: center;
             }
             th:nth-child(1) {
-                width: 30rem;
+                width: 40rem;
                 text-align: left;
                 font-weight: 600;
+            }
+            th[scope="col"] {
+                position: sticky;
+                top: 0;
+                border-top: 0.2rem solid #fdfdfd;
+                border-bottom: 0.2rem solid #fdfdfd;
             }
             th[scope="col"] > div {
                 display: flex;
