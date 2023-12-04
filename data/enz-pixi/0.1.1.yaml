@@ -30,8 +30,8 @@ block:
     - change_scale_size
     - set_scale_size
   judgement:
-    - True # new!
-    - False # new!
+    # - True # new!
+    # - False # new!
     - is_press_some_key
     - boolean_basic_operator
   calc:
