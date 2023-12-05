@@ -67,7 +67,13 @@ for await (const dir of Deno.readDir("meta/")) {
 
 /*
 <tr>
-    <th scope="row">{시작하기 버튼을 클릭했을 때}</th>
+    <th scope="row">
+        {시작하기 버튼을 클릭했을 때}
+        <br>
+        <span class="id">
+            when_run_button_click
+        </span>
+    </th>
     <td o>0.1.0</td>
     <td x>x</td>
 </tr>
@@ -76,9 +82,13 @@ for await (const dir of Deno.readDir("meta/")) {
 const gen = result.map(
     ({name: name_, category, type, stat}) => `
         <tr>
-            <th scope="row">${
-                meta[type][category][name_]?.template
-            }</th>
+            <th scope="row">
+                ${meta[type][category][name_]?.template}
+                <br>
+                <span class="id">
+                    ${name_}
+                </span>
+            </th>
             ${
                 projectList.map(project => {
                     if (stat[project]) {

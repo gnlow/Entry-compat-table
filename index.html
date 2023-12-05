@@ -51,6 +51,13 @@
             td[x] {
                 background: #fd3430;
             }
+            span.id {
+                font-size: 1.5rem;
+                background: #eee;
+                padding: 0.2rem 0.5rem;
+                border-radius: 0.5rem;
+                font-weight: 400;
+            }
         </style>
         Entry-compat-table
         <table>
@@ -77,12 +84,24 @@
             <tbody>
                 <!-- Here -->
                 <tr>
-                    <th scope="row">{시작하기 버튼을 클릭했을 때}</th>
+                    <th scope="row">
+                        {시작하기 버튼을 클릭했을 때}
+                        <br>
+                        <span class="id">
+                            when_run_button_click
+                        </span>
+                    </th>
                     <td o>0.1.0</td>
                     <td x>x</td>
                 </tr>
                 <tr>
-                    <th scope="row">{[q] 키를 눌렀을 때}</th>
+                    <th scope="row">
+                        {[q] 키를 눌렀을 때}
+                        <br>
+                        <span class="id">
+                            when_some_key_pressed
+                        </span>
+                    </th>
                     <td partial>0.1.0</td>
                     <td x>x</td>
                 </tr>
