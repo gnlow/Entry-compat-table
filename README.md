@@ -5,3 +5,6 @@ Entry compatibility table
 ```js
 EntryStatic.getAllBlocks()
 ```
+```js
+copy(JSON.stringify(Object.fromEntries(EntryStatic.getAllBlocks().toSpliced(10).map(({category, blocks}) => [category, Object.fromEntries(blocks.map(x => [x, "o"]))]))))
+```

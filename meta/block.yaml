@@ -212,7 +212,7 @@ sound:
   get_sound_duration:
     template: "([강아지 짖는 소리] 소리의 길이)"
   get_sound_volume:
-    template: "(소리 크기 %2)"
+    template: "(소리 크기)"
   sound_volume_change:
     template: "{소리 크기를 (10) 만큼 바꾸기}"
   sound_volume_set:

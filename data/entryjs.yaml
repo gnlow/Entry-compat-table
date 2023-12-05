@@ -99,8 +99,11 @@ block:
     sound_something_wait_with_block: o
     sound_something_second_wait_with_block: o
     sound_from_to_and_wait: o
+    get_sound_duration: o
+    get_sound_volume: o
     sound_volume_change: o
     sound_volume_set: o
+    get_sound_speed: o
     sound_speed_change: o
     sound_speed_set: o
     sound_silent_all: o
@@ -121,7 +124,6 @@ block:
     calc_rand: o
     coordinate_mouse: o
     coordinate_object: o
-    get_sound_volume: o
     quotient_and_mod: o
     calc_operation: o
     get_project_timer_value: o
@@ -129,7 +131,6 @@ block:
     set_visible_project_timer: o
     get_date: o
     distance_something: o
-    get_sound_duration: o
     get_user_name: o
     get_nickname: o
     length_of_string: o
