@@ -1,0 +1,99 @@
+feature: {}
+block:
+  start:
+    when_run_button_click: o
+    when_some_key_pressed: o
+    mouse_clicked: o
+    mouse_click_cancled: o
+    when_object_click: o
+    when_message_cast: o
+    message_cast: o
+  flow:
+    wait_second: o
+    repeat_basic: o
+    repeat_inf: o
+    repeat_while_true: o
+    stop_repeat: o
+    _if: o
+    if_else: o
+    wait_until_true: o
+  moving:
+    move_direction: o
+    bounce_wall: o
+    move_x: o
+    move_y: o
+    move_xy_time: o
+    locate_xy: o
+    locate_xy_time: o
+    locate: o
+    locate_object_time: o
+    rotate_relative: o
+    direction_relative: o
+    rotate_absolute: o
+    direction_absolute: o
+    see_angle_object: o
+  looks:
+    show: o
+    hide: o
+    dialog_time: o
+    dialog: o
+    change_to_some_shape: o
+    change_to_next_shape: o
+    add_effect_amount: o
+    change_effect_amount: o
+    erase_all_effects: o
+    change_scale_size: o
+    set_scale_size: o
+    change_object_index: o
+  brush:
+    brush_stamp: o
+    start_drawing: o
+    stop_drawing: o
+    set_color: o
+    change_thickness: o
+    set_thickness: o
+    brush_erase_all: o
+  text:
+    text_write: o
+    text_append: o
+    text_prepend: o
+    text_change_effect: o
+    text_change_font: o
+    text_change_font_color: o
+    text_change_bg_color: o
+    text_flush: o
+  sound:
+    sound_something_with_block: o
+    sound_something_wait_with_block: o
+    sound_volume_change: o
+    sound_volume_set: o
+  judgement:
+    is_clicked: o
+    is_press_some_key: o
+    reach_something: o
+    boolean_basic_operator: o
+    boolean_and_or: o
+    boolean_not: o
+  calc:
+    calc_basic: o
+    calc_rand: o
+    coordinate_object: o
+    quotient_and_mod: o
+    get_project_timer_value: o
+    choose_project_timer_action: o
+    set_visible_project_timer: o
+    length_of_string: o
+    combine_something: o
+    char_at: o
+    substring: o
+    replace_string: o
+  variable:
+    variableAddButton: o
+    ask_and_wait: o
+    get_canvas_input_value: o
+    set_visible_answer: o
+    get_variable: o
+    change_variable: o
+    set_variable: o
+    show_variable: o
+    hide_variable: o
