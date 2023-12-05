@@ -2,13 +2,13 @@ import { parse } from "https://deno.land/std@0.208.0/yaml/mod.ts"
 
 type Data = Record<string, Record<string, string[]>>
 
-const init = parse(await Deno.readTextFile("data/entryjs/o.yaml")) as Data
+const init = parse(await Deno.readTextFile("data/entryjs.yaml")) as Data
 
 const result = Object.entries(init)
     .map(([type, v]) =>
         Object.entries(v)
-            .map(([category, list]) =>
-                list.map(name => ({
+            .map(([category, features]) =>
+                Object.entries(features).map(([name]) => ({
                     name,
                     category,
                     type,
@@ -21,37 +21,32 @@ const result = Object.entries(init)
 
 const projectList = [] as string[]
 
-for await (const { name: project } of Deno.readDir("data/")) {
+for await (const { name: fileName } of Deno.readDir(`data/`)) {
+    const project = fileName.replace(".yaml", "")
     projectList.push(project)
-    for await (const { name: fileName } of Deno.readDir(`data/${project}`)) {
-        console.log(fileName)
-        const src = parse(await Deno.readTextFile(`data/${project}/${fileName}`)) as Data
 
-        Object.entries(src)
-            .forEach(([type, v]) =>
-                Object.entries(v)
-                    .forEach(([category, list]) =>
-                        list.forEach(name_ => {
-                            const target = result.find(({name}) => name == name_.replace("*", ""))
-                            if (!target) {
-                                console.log("Invalid feature name", {
-                                    project,
-                                    fileName,
-                                    type,
-                                    category,
-                                    name,
-                                })
-                            } else {
-                                target.stat[project] = fileName.replace(".yaml", "") + (
-                                    name_.endsWith("*")
-                                        ? "*"
-                                        : ""
-                                )
-                            }
-                        })
-                    )
-            )
-    }
+    const src = parse(await Deno.readTextFile(`data/${fileName}`)) as Data
+
+    Object.entries(src)
+        .forEach(([type, v]) =>
+            Object.entries(v)
+                .forEach(([category, features]) =>
+                    Object.entries(features).forEach(([name_, status]) => {
+                        const target = result.find(({name}) => name == name_.replace("*", ""))
+                        if (!target) {
+                            console.log("Invalid feature name", {
+                                project,
+                                fileName,
+                                type,
+                                category,
+                                name,
+                            })
+                        } else {
+                            target.stat[project] = status
+                        }
+                    })
+                )
+        )
 }
 
 const meta = {} as Record<string /* type */,

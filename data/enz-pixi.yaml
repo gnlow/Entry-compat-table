@@ -1,0 +1,47 @@
+feature:
+  function:
+    param: 0.1.0
+    local_variable: 0.1.0
+    return: 0.1.0
+block:
+  start:
+    when_run_button_click: 0.1.0
+  flow:
+    wait_second: 0.1.0
+    repeat_basic: 0.1.0
+    repeat_inf: 0.1.0
+    repeat_while_true: 0.1.1
+    _if: 0.1.0
+    if_else: 0.1.0
+    create_clone: 0.1.1
+    when_clone_start: 0.1.1
+    delete_clone: 0.1.1
+  moving:
+    move_x: 0.1.0
+    move_y: 0.1.0
+    locate_x: 0.1.0
+    locate_y: 0.1.0
+    locate_xy: 0.1.0
+  looks:
+    dialog*: 0.1.0 # Console only
+    change_to_next_shape: 0.1.0
+    add_effect_amount*: 0.1.0 # Transparency only
+    change_effect_amount*: 0.1.0 # Transparency only
+    change_scale_size: 0.1.0
+    set_scale_size: 0.1.0
+  judgement:
+    # True: 0.1.1
+    # False: 0.1.1
+    is_press_some_key: 0.1.0
+    boolean_basic_operator: 0.1.0
+  calc:
+    calc_basic: 0.1.0
+    calc_rand: 0.1.0
+    coordinate_object: 0.1.1
+    calc_operation*: 0.1.0 # Without Factorial
+    get_project_timer_value: 0.1.0
+    choose_project_timer_action: 0.1.0
+  variable:
+    get_variable: 0.1.0
+    change_variable: 0.1.0
+    set_variable: 0.1.0

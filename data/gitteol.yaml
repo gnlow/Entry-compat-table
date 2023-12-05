@@ -1,0 +1,25 @@
+block:
+  start:
+    when_run_button_click: o
+  judgement:
+    boolean_basic_operator: o
+  calc:
+    calc_basic: o
+    calc_operation: o
+    coordinate_object: o
+    length_of_string: o
+    quotient_and_mod: o
+  variable:
+    change_variable: o
+    get_variable: o
+    set_variable: o
+  moving:
+    locate: o
+    locate_xy: o
+    move_x: o
+    move_xy_time: o
+    move_y: o
+  flow:
+    repeat_basic: o
+    repeat_inf: o
+    wait_second: o
