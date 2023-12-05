@@ -32,7 +32,7 @@ for await (const { name: fileName } of Deno.readDir(`data/`)) {
             Object.entries(v)
                 .forEach(([category, features]) =>
                     Object.entries(features).forEach(([name_, status]) => {
-                        const target = result.find(({name}) => name == name_.replace("*", ""))
+                        const target = result.find(({name}) => name == name_)
                         if (!target) {
                             console.log("Invalid feature name", {
                                 project,
