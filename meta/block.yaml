@@ -26,7 +26,7 @@ start:
     template: "{[다음 | 이전] 장면 시작하기}"
   check_object_property:
     template: "{[대상 없음] 가 [언젠가 | 지금] [x | y | 크기 | 방향 | 이동 방향 | 텍스트] [= | > | < |
-      ≥ | ≤] %5 %6}"
+      ≥ | ≤] (10)}"
   check_block_execution:
     template: "{[대상 없음] 에서 아래 블록이 [비슷하게 | 똑같이] [TextInput] 번 실행되었는가 { }}"
   switch_scope:
@@ -73,7 +73,7 @@ flow:
   restart_project:
     template: "{처음부터 다시 실행하기}"
   when_clone_start:
-    template: "{복제본이 처음 생성되었을때}"
+    template: "{복제본이 처음 생성되었을 때}"
   create_clone:
     template: "{[자신] 의 복제본 만들기}"
   delete_clone:
@@ -181,19 +181,19 @@ text:
   text_read:
     template: "(글상자 [자신]의 내용)"
   text_write:
-    template: "{(10) 라고 글쓰기}"
+    template: "{(10) (이)라고 글쓰기}"
   text_append:
-    template: "{(10) 라고 뒤에 이어쓰기}"
+    template: "{(10) 을(를) 뒤에 추가하기}"
   text_prepend:
-    template: "{(10) 라고 앞에 추가하기}"
+    template: "{(10) 을(를) 앞에 추가하기}"
   text_change_effect:
     template: "{텍스트에 [가로줄 | 밑줄 | 이탤릭 | 볼드] 효과 [켜기 | 끄기]}"
   text_change_font:
-    template: "{글씨체를 [바탕체] 로 변경}"
+    template: "{글씨체를 [나눔고딕] (으)로 바꾸기}"
   text_change_font_color:
-    template: "{글씨색을 (10) 로 변경}"
+    template: "{글씨색을 (10) (으)로 바꾸기}"
   text_change_bg_color:
-    template: "{배경색을 (10) 로 변경}"
+    template: "{배경색을 (10) (으)로 바꾸기}"
   text_flush:
     template: "{텍스트 모두 지우기}"
 sound:
@@ -209,10 +209,16 @@ sound:
     template: "{소리 (10) (10) 초 재생하고 기다리기}"
   sound_from_to_and_wait:
     template: "{소리 (10) (10) 초 부터 (10) 초까지 재생하고 기다리기}"
+  get_sound_duration:
+    template: "([강아지 짖는 소리] 소리의 길이)"
+  get_sound_volume:
+    template: "(소리 크기 %2)"
   sound_volume_change:
     template: "{소리 크기를 (10) 만큼 바꾸기}"
   sound_volume_set:
     template: "{소리 크기를 (10) % 로 정하기}"
+  get_sound_speed:
+    template: "(소리 빠르기)"
   sound_speed_change:
     template: "{소리 빠르기를 (10) 만큼 바꾸기}"
   sound_speed_set:
@@ -246,15 +252,13 @@ calc:
   calc_basic:
     template: "((10) [+ | - | x | /] (10))"
   calc_rand:
-    template: "((10) 부터 (10) %5)"
+    template: "((10) 부터 (10) 사이의 무작위 수)"
   coordinate_mouse:
     template: "(마우스 [x | y] 좌표)"
   coordinate_object:
     template: "([엔트리봇] 의 [x 좌푯값 | y 좌푯값 | 방향 | 이동방향 | 크기 | 모양 번호 | 모양 이름])"
-  get_sound_volume:
-    template: "(소릿값)"
   quotient_and_mod:
-    template: "((10) / (10) %5 %6)"
+    template: "((10) / (10) 의 [몫 | 나머지])"
   calc_operation:
     template: "((10) 의 [제곱 | 루트 | 사인값 | 코사인값 | 탄젠트값 | 아크사인값 | 아크코사인값 | 아크탄젠트값 | 로그값
       | 자연로그값 | 소수점 부분 | 소수점 버림값 | 소수점 올림값 | 소수점 반올림값 | 펙토리얼값 | 절댓값])"
@@ -268,8 +272,6 @@ calc:
     template: "(현재 [연도 | 월 | 일 | 요일 | 시각(시) | 시각(분) | 시각(초)])"
   distance_something:
     template: "([엔트리봇] 까지의 거리)"
-  get_sound_duration:
-    template: "([강아지 짖는 소리] 소리의 길이)"
   get_user_name:
     template: "(아이디)"
   get_nickname:
@@ -279,19 +281,19 @@ calc:
   count_match_string:
     template: "((10) 에서 (10) 의 글자 수)"
   combine_something:
-    template: "((10) 과(와) (10) %5)"
+    template: "((10) 과(와) (10) 을(를) 합친 값)"
   char_at:
-    template: "((10) 의 (10) %5)"
+    template: "((10) 의 (10) 번째 글자)"
   substring:
-    template: "((10) 의 (10) %5 %6 %7)"
+    template: "((10) 의 (10) 번째 글자부터 (10) 번째 글자까지의 글자)"
   index_of_string:
-    template: "((10) 에서 (10) %5)"
+    template: "((10) 에서 (10) 의 시작 위치)"
   replace_string:
-    template: "((10) 의 (10) %5 %6 %7)"
+    template: "((10) 의 (10) 을(를) (10) 로 바꾼 값)"
   reverse_of_string:
-    template: "((10) 을(를) 뒤집기)"
+    template: "((10) 을(를) 뒤집은 값)"
   change_string_case:
-    template: "((10) 의 [대문자 | 소문자] %5)"
+    template: "((10) 의 [대문자 | 소문자])"
   get_block_count:
     template: "([모든] 의 블록 수)"
   change_rgb_to_hex:
@@ -320,7 +322,7 @@ variable:
   hide_variable:
     template: "{변수 [변수] 숨기기}"
   value_of_index_from_list:
-    template: "([리스트] 의 (10) %5)"
+    template: "([리스트] 의 (10) 번째 항목)"
   add_value_to_list:
     template: "{(10) 항목을 [리스트] 에 추가하기}"
   remove_value_from_list:
@@ -328,11 +330,11 @@ variable:
   insert_value_to_list:
     template: "{(10) 을(를) [리스트] 의 (10) 번째에 넣기}"
   change_value_list_index:
-    template: "{[리스트]   (10) 번째 항목을 (10) (으)로 바꾸기}"
+    template: "{[리스트]  (10) 번째 항목을 (10) (으)로 바꾸기}"
   length_of_list:
     template: "([리스트] 항목 수)"
   is_included_in_list:
-    template: "<[리스트] 에 (10) %5>"
+    template: "<[리스트] 에 (10) 이 포함되어 있는가?>"
   show_list:
     template: "{리스트 [리스트] 보이기}"
   hide_list:
@@ -358,7 +360,7 @@ analysis:
   delete_row_from_table:
     template: "{테이블 [테이블] (10)번째 [행 | 열] 삭제하기}"
   set_value_from_table:
-    template: "{테이블 [테이블] (10)번째 행의 (10)을(를) (10)(으)로 바꾸기 %5}"
+    template: "{테이블 [테이블] (10)번째 행의 (10)을(를) (10)(으)로 바꾸기}"
   save_current_table:
     template: "{테이블 [테이블] 을(를) 현재 상태로 남기기}"
   get_table_count:
@@ -417,14 +419,16 @@ ai_utilize:
   get_regression_predict_2:
     template: "([TextDynamic] (10) [TextDynamic] (10) 의 예측 값)"
   get_regression_predict_3:
-    template: "([TextDynamic] (10) [TextDynamic] (10) %5 %6 의 예측 값)"
+    template: "([TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) 의 예측 값)"
   get_regression_predict_4:
-    template: "([TextDynamic] (10) [TextDynamic] (10) %5 %6 %7 %8 의 예측 값)"
+    template: "([TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) [TextDynamic]
+      (10) 의 예측 값)"
   get_regression_predict_5:
-    template: "([TextDynamic] (10) [TextDynamic] (10) %5 %6 %7 %8 %9 %10 의 예측 값)"
+    template: "([TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) [TextDynamic]
+      (10) [TextDynamic] (10) 의 예측 값)"
   get_regression_predict_6:
-    template: "([TextDynamic] (10) [TextDynamic] (10) %5 %6 %7 %8 %9 %10 %11 %12 의
-      예측 값)"
+    template: "([TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) [TextDynamic]
+      (10) [TextDynamic] (10) [TextDynamic] (10) 의 예측 값)"
   get_regression_accuracy:
     template: "(결정계수)"
   set_logistic_regression_option:
@@ -434,17 +438,19 @@ ai_utilize:
   get_logistic_regression_probability_1:
     template: "([TextDynamic] (10) 의 [??] 에 대한 확률)"
   get_logistic_regression_probability_2:
-    template: "([TextDynamic] (10) [TextDynamic] (10) 의 %5 에 대한 확률)"
+    template: "([TextDynamic] (10) [TextDynamic] (10) 의 [??] 에 대한 확률)"
   get_logistic_regression_probability_3:
-    template: "([TextDynamic] (10) [TextDynamic] (10) %5 %6 의 %7 에 대한 확률)"
+    template: "([TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) 의 [??] 에
+      대한 확률)"
   get_logistic_regression_probability_4:
-    template: "([TextDynamic] (10) [TextDynamic] (10) %5 %6 %7 %8 의 %9 에 대한 확률)"
+    template: "([TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) [TextDynamic]
+      (10) 의 [??] 에 대한 확률)"
   get_logistic_regression_probability_5:
-    template: "([TextDynamic] (10) [TextDynamic] (10) %5 %6 %7 %8 %9 %10 의 %11 에 대한
-      확률)"
+    template: "([TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) [TextDynamic]
+      (10) [TextDynamic] (10) 의 [??] 에 대한 확률)"
   get_logistic_regression_probability_6:
-    template: "([TextDynamic] (10) [TextDynamic] (10) %5 %6 %7 %8 %9 %10 %11 %12 의
-      %13 에 대한 확률)"
+    template: "([TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) [TextDynamic]
+      (10) [TextDynamic] (10) [TextDynamic] (10) 의 [??] 에 대한 확률)"
   set_decisiontree_option:
     template: "{학습 조건 [노드의 최소 데이터 수 | 트리의 최대 깊이] 을 (10) 으로 바꾸기}"
   set_decisiontree_tree:
@@ -458,30 +464,34 @@ ai_utilize:
   is_result_1:
     template: "<[TextDynamic] (10) 의 분류 결과가 [??] 인가?>"
   is_result_2:
-    template: "<[TextDynamic] (10) [TextDynamic] (10) 의 분류 결과가 %5 인가?>"
+    template: "<[TextDynamic] (10) [TextDynamic] (10) 의 분류 결과가 [??] 인가?>"
   is_result_3:
-    template: "<[TextDynamic] (10) [TextDynamic] (10) %5 %6 의 분류 결과가 %7 인가?>"
+    template: "<[TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) 의 분류 결과가
+      [??] 인가?>"
   is_result_4:
-    template: "<[TextDynamic] (10) [TextDynamic] (10) %5 %6 %7 %8 의 분류 결과가 %9 인가?>"
+    template: "<[TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) [TextDynamic]
+      (10) 의 분류 결과가 [??] 인가?>"
   is_result_5:
-    template: "<[TextDynamic] (10) [TextDynamic] (10) %5 %6 %7 %8 %9 %10 의 분류 결과가
-      %11 인가?>"
+    template: "<[TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) [TextDynamic]
+      (10) [TextDynamic] (10) 의 분류 결과가 [??] 인가?>"
   is_result_6:
-    template: "<[TextDynamic] (10) [TextDynamic] (10) %5 %6 %7 %8 %9 %10 %11 %12 의
-      분류 결과가 %13 인가?>"
+    template: "<[TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) [TextDynamic]
+      (10) [TextDynamic] (10) [TextDynamic] (10) 의 분류 결과가 [??] 인가?>"
   get_predict_1:
     template: "([TextDynamic] (10) 의 분류 결과)"
   get_predict_2:
     template: "([TextDynamic] (10) [TextDynamic] (10) 의 분류 결과)"
   get_predict_3:
-    template: "([TextDynamic] (10) [TextDynamic] (10) %5 %6 의 분류 결과)"
+    template: "([TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) 의 분류 결과)"
   get_predict_4:
-    template: "([TextDynamic] (10) [TextDynamic] (10) %5 %6 %7 %8 의 분류 결과)"
+    template: "([TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) [TextDynamic]
+      (10) 의 분류 결과)"
   get_predict_5:
-    template: "([TextDynamic] (10) [TextDynamic] (10) %5 %6 %7 %8 %9 %10 의 분류 결과)"
+    template: "([TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) [TextDynamic]
+      (10) [TextDynamic] (10) 의 분류 결과)"
   get_predict_6:
-    template: "([TextDynamic] (10) [TextDynamic] (10) %5 %6 %7 %8 %9 %10 %11 %12 의
-      분류 결과)"
+    template: "([TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) [TextDynamic]
+      (10) [TextDynamic] (10) [TextDynamic] (10) 의 분류 결과)"
   get_result_info:
     template: "(모델의 [정확도 | F1 | 정밀도 | 재현율])"
   set_cluster_option_k:
@@ -497,14 +507,16 @@ ai_utilize:
   get_cluster_centriod_index_2:
     template: "([TextDynamic] (10) [TextDynamic] (10)의 군집)"
   get_cluster_centriod_index_3:
-    template: "([TextDynamic] (10) [TextDynamic] (10) %5 %6의 군집)"
+    template: "([TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10)의 군집)"
   get_cluster_centriod_index_4:
-    template: "([TextDynamic] (10) [TextDynamic] (10) %5 %6 %7 %8의 군집)"
+    template: "([TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) [TextDynamic]
+      (10)의 군집)"
   get_cluster_centriod_index_5:
-    template: "([TextDynamic] (10) [TextDynamic] (10) %5 %6 %7 %8 %9 %10의 군집)"
+    template: "([TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) [TextDynamic]
+      (10) [TextDynamic] (10)의 군집)"
   get_cluster_centriod_index_6:
-    template: "([TextDynamic] (10) [TextDynamic] (10) %5 %6 %7 %8 %9 %10 %11 %12의
-      군집)"
+    template: "([TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) [TextDynamic]
+      (10) [TextDynamic] (10) [TextDynamic] (10)의 군집)"
   set_number_learning_option_k:
     template: "{이웃을 (10) 개로 바꾸기}"
   get_number_learning_predict_1:
@@ -512,42 +524,48 @@ ai_utilize:
   get_number_learning_predict_2:
     template: "([TextDynamic] (10) [TextDynamic] (10)의 분류 결과)"
   get_number_learning_predict_3:
-    template: "([TextDynamic] (10) [TextDynamic] (10) %5 %6 의 분류 결과)"
+    template: "([TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) 의 분류 결과)"
   get_number_learning_predict_4:
-    template: "([TextDynamic] (10) [TextDynamic] (10) %5 %6 %7 %8 의 분류 결과)"
+    template: "([TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) [TextDynamic]
+      (10) 의 분류 결과)"
   get_number_learning_predict_5:
-    template: "([TextDynamic] (10) [TextDynamic] (10) %5 %6 %7 %8 %9 %10 의 분류 결과)"
+    template: "([TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) [TextDynamic]
+      (10) [TextDynamic] (10) 의 분류 결과)"
   get_number_learning_predict_6:
-    template: "([TextDynamic] (10) [TextDynamic] (10) %5 %6 %7 %8 %9 %10 %11 %12 의
-      분류 결과)"
+    template: "([TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) [TextDynamic]
+      (10) [TextDynamic] (10) [TextDynamic] (10) 의 분류 결과)"
   get_number_learning_predict_param_1:
     template: "([TextDynamic] (10) 의 [??] 에 대한 [이웃 개수])"
   get_number_learning_predict_param_2:
-    template: "([TextDynamic] (10) [TextDynamic] (10) 의 %5 에 대한 %6)"
+    template: "([TextDynamic] (10) [TextDynamic] (10) 의 [??] 에 대한 [이웃 개수])"
   get_number_learning_predict_param_3:
-    template: "([TextDynamic] (10) [TextDynamic] (10) %5 %6 의 %7 에 대한 %8)"
+    template: "([TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) 의 [??] 에
+      대한 [이웃 개수])"
   get_number_learning_predict_param_4:
-    template: "([TextDynamic] (10) [TextDynamic] (10) %5 %6 %7 %8 의 %9 에 대한 %10)"
+    template: "([TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) [TextDynamic]
+      (10) 의 [??] 에 대한 [이웃 개수])"
   get_number_learning_predict_param_5:
-    template: "([TextDynamic] (10) [TextDynamic] (10) %5 %6 %7 %8 %9 %10 의 %11 에 대한
-      %12)"
+    template: "([TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) [TextDynamic]
+      (10) [TextDynamic] (10) 의 [??] 에 대한 [이웃 개수])"
   get_number_learning_predict_param_6:
-    template: "([TextDynamic] (10) [TextDynamic] (10) %5 %6 %7 %8 %9 %10 %11 %12 의
-      %13 에 대한 %14)"
+    template: "([TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) [TextDynamic]
+      (10) [TextDynamic] (10) [TextDynamic] (10) 의 [??] 에 대한 [이웃 개수])"
   is_number_learning_group_1:
     template: "<[TextDynamic] (10) 의 분류 결과가 [??] 인가?>"
   is_number_learning_group_2:
-    template: "<[TextDynamic] (10) [TextDynamic] (10) 의 분류 결과가 %5 인가?>"
+    template: "<[TextDynamic] (10) [TextDynamic] (10) 의 분류 결과가 [??] 인가?>"
   is_number_learning_group_3:
-    template: "<[TextDynamic] (10) [TextDynamic] (10) %5 %6 의 분류 결과가 %7 인가?>"
+    template: "<[TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) 의 분류 결과가
+      [??] 인가?>"
   is_number_learning_group_4:
-    template: "<[TextDynamic] (10) [TextDynamic] (10) %5 %6 %7 %8 의 분류 결과가 %9 인가?>"
+    template: "<[TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) [TextDynamic]
+      (10) 의 분류 결과가 [??] 인가?>"
   is_number_learning_group_5:
-    template: "<[TextDynamic] (10) [TextDynamic] (10) %5 %6 %7 %8 %9 %10 의 분류 결과가
-      %11 인가?>"
+    template: "<[TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) [TextDynamic]
+      (10) [TextDynamic] (10) 의 분류 결과가 [??] 인가?>"
   is_number_learning_group_6:
-    template: "<[TextDynamic] (10) [TextDynamic] (10) %5 %6 %7 %8 %9 %10 %11 %12 의
-      분류 결과가 %13 인가?>"
+    template: "<[TextDynamic] (10) [TextDynamic] (10) [TextDynamic] (10) [TextDynamic]
+      (10) [TextDynamic] (10) [TextDynamic] (10) 의 분류 결과가 [??] 인가?>"
   insert_data_for_test:
     template: "{학습한 모델로 분류하기}"
   video_capture_for_image_test:
@@ -589,7 +607,7 @@ ai_utilize:
     template: 번역
   get_translated_string:
     template: "([한국어 | 영어 | 일본어 | 중국어간체 | 중국어번체 | 스페인어 | 프랑스어 | 독일어 | 러시아어 | 포르투갈어
-      | 태국어 | 베트남 | 인도네시아어 | 힌디어] (10) 을(를) [??]로 번역하기)"
+      | 태국어 | 베트남 | 인도네시아어 | 힌디어] (10) 을(를) [??]로 번역한 값)"
   check_language:
     template: "((10)의 언어)"
   video_title:
@@ -654,8 +672,7 @@ ai_utilize:
   locate_to_hand:
     template: "{[1 | 2] 번째 손의 [엄지 | 검지 | 중지 | 약지 | 소지 | 손목] [??] (으)로 이동하기}"
   locate_time_to_hand:
-    template: "{(10) 초 동안 [1 | 2] 번째 손의 [엄지 | 검지 | 중지 | 약지 | 소지 | 손목] [??] (으)로 이동하기
-      %5}"
+    template: "{(10) 초 동안 [1 | 2] 번째 손의 [엄지 | 검지 | 중지 | 약지 | 소지 | 손목] [??] (으)로 이동하기}"
   axis_detected_hand:
     template: "([1 | 2] 번째 손의 [엄지 | 검지 | 중지 | 약지 | 소지 | 손목] [??] 의 [x | y] 좌표)"
   is_which_hand:

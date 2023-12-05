@@ -1,6 +1,6 @@
 var getBlockTemplate =
     blockId => {
-        const block = Entry.block[blockId]
+        let block = Entry.block[blockId]
 
         /*
         console.log(block)
@@ -9,7 +9,12 @@ var getBlockTemplate =
         console.log(Lang.template[blockId])
         */
 
-        const statements = block.statements
+        if (!block) block = {
+            statements: [],
+            params: [],
+        }
+
+        const statements = block.statements || []
 
         const params = block.params.map(param => {
             switch (param.type) {
@@ -48,12 +53,11 @@ var getBlockTemplate =
             }
         })
         let result = (block.template || Lang.template[blockId] || "")
-            .replace("%1", params[0])
-            .replace("%2", params[1])
-            .replace("%3", params[2])
-            .replace("%4", params[3])
+
+        params.forEach((param, i) => result = result.replace(`%${i+1}`, param))
+        result = result.trim()
             .replace("  ", " ")
-            .trim()
+            .replace("  ", " ")
         
         block.statements?.forEach(() => result += " { }")
 
