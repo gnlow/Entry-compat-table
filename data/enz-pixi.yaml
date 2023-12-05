@@ -22,6 +22,10 @@ block:
     locate_x: 0.1.0
     locate_y: 0.1.0
     locate_xy: 0.1.0
+    rotate_relative: 0.1.2
+    direction_relative: 0.1.2
+    rotate_absolute: 0.1.2
+    direction_absolute: 0.1.2
   looks:
     dialog*: 0.1.0 # Console only
     change_to_next_shape: 0.1.0
@@ -29,6 +33,8 @@ block:
     change_effect_amount*: 0.1.0 # Transparency only
     change_scale_size: 0.1.0
     set_scale_size: 0.1.0
+    show: 0.1.2
+    hide: 0.1.2
   judgement:
     # True: 0.1.1
     # False: 0.1.1
@@ -41,6 +47,8 @@ block:
     calc_operation*: 0.1.0 # Without Factorial
     get_project_timer_value: 0.1.0
     choose_project_timer_action: 0.1.0
+    # angle: 0.1.2
+    quotient_and_mod: 0.1.2
   variable:
     get_variable: 0.1.0
     change_variable: 0.1.0
