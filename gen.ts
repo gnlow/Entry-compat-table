@@ -82,7 +82,7 @@ for await (const dir of Deno.readDir("meta/")) {
 const gen = result.map(
     ({name: name_, category, type, stat}) => `
         <tr>
-            <th scope="row">
+            <th scope="row" category="${category}">
                 ${meta[type][category][name_]?.template}
                 <br>
                 <span class="id">
