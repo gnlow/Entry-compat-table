@@ -9,6 +9,9 @@ block:
     when_scene_start: 0.1.3
     start_scene: 0.1.3
     start_neighbor_scene: 0.1.3
+    when_message_cast: 0.1.4
+    message_cast: 0.1.4
+    message_cast_wait: 0.1.4
   flow:
     wait_second: 0.1.0
     repeat_basic: 0.1.0
@@ -19,6 +22,8 @@ block:
     create_clone: 0.1.1
     when_clone_start: 0.1.1
     delete_clone: 0.1.1
+    stop_repeat: 0.1.4
+    wait_until_true: 0.1.4
   moving:
     move_x: 0.1.0
     move_y: 0.1.0
@@ -30,6 +35,9 @@ block:
     rotate_absolute: 0.1.2
     direction_absolute: 0.1.2
     move_direction: 0.1.3
+    locate: 0.1.4* # without mouse
+    see_angle_object: 0.1.4* # without mouse
+    move_to_angle: 0.1.4
   looks:
     dialog: 0.1.0* # Console only
     change_to_next_shape: 0.1.0
@@ -39,6 +47,8 @@ block:
     set_scale_size: 0.1.0
     show: 0.1.2
     hide: 0.1.2
+    # get_pictures: 0.1.4
+    change_to_some_shape: 0.1.4
   judgement:
     # True: 0.1.1
     # False: 0.1.1
