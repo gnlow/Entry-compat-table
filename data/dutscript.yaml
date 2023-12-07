@@ -1,0 +1,44 @@
+feature:
+  function:
+    param: o
+    local_variable: o
+    return: o
+block:
+    # True: o
+    # False: o
+    # text: o
+    # number: o
+    # angle: o
+  flow:
+    wait_second: o
+    wait_until_true: o
+    repeat_basic: o
+    repeat_inf: o
+    repeat_while_true: o
+    _if: o
+    if_else: o
+    stop_repeat: o
+    stop_object: o
+  looks:
+    dialog: o
+  moving:
+    move_direction: o
+    move_x: o
+    move_y: o
+    move_xy_time: o
+    locate: o
+    locate_x: o
+    locate_y: o
+    locate_xy: o
+    rotate_relative: o
+  judgement:
+    boolean_basic_operator: o
+    reach_something: o
+  calc:
+    calc_basic: o
+    calc_rand: o
+    choose_project_timer_action: o
+    get_project_timer_value: o
+  variable:
+    set_variable: o
+    get_variable: o
