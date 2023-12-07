@@ -9,6 +9,8 @@ block:
     # text: o
     # number: o
     # angle: o
+  start:
+    when_run_button_click: o
   flow:
     wait_second: o
     wait_until_true: o
