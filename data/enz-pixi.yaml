@@ -12,6 +12,7 @@ block:
     when_message_cast: 0.1.4
     message_cast: 0.1.4
     message_cast_wait: 0.1.4
+    when_some_key_pressed: 0.1.5
   flow:
     wait_second: 0.1.0
     repeat_basic: 0.1.0
@@ -63,6 +64,16 @@ block:
     choose_project_timer_action: 0.1.0
     # angle: 0.1.2
     quotient_and_mod: 0.1.2
+    get_date: 0.1.5
+    length_of_string: 0.1.5
+    count_match_string: 0.1.5
+    combine_something: 0.1.5
+    char_at: 0.1.5
+    substring: 0.1.5
+    index_of_string: 0.1.5
+    replace_string: 0.1.5
+    reverse_of_string: 0.1.5
+    change_string_case: 0.1.5
   variable:
     get_variable: 0.1.0
     change_variable: 0.1.0
