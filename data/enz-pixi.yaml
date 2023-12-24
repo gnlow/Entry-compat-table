@@ -50,6 +50,12 @@ block:
     hide: 0.1.2
     # get_pictures: 0.1.4
     change_to_some_shape: 0.1.4
+  text:
+    text_read: 0.1.6
+    text_write: 0.1.6
+    text_append: 0.1.6
+    text_prepend: 0.1.6
+    text_flush: 0.1.6
   judgement:
     # True: 0.1.1
     # False: 0.1.1
