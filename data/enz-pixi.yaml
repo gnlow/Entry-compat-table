@@ -50,17 +50,30 @@ block:
     hide: 0.1.2
     # get_pictures: 0.1.4
     change_to_some_shape: 0.1.4
+    flip_x: 0.1.7
+    flip_y: 0.1.7
   text:
     text_read: 0.1.6
     text_write: 0.1.6
     text_append: 0.1.6
     text_prepend: 0.1.6
     text_flush: 0.1.6
+  sound:
+    # get_sounds: 0.1.7
+    sound_something_with_block: 0.1.7
+    sound_something_second_with_block: 0.1.7
+    sound_from_to: 0.1.7
+    sound_something_wait_with_block: 0.1.7
+    sound_something_second_wait_with_block: 0.1.7
+    sound_from_to_and_wait: 0.1.7
+    play_bgm: 0.1.7
   judgement:
     # True: 0.1.1
     # False: 0.1.1
     is_press_some_key: 0.1.0
     boolean_basic_operator: 0.1.0
+    boolean_and_or: 0.1.7
+    boolean_not: 0.1.7
   calc:
     calc_basic: 0.1.0
     calc_rand: 0.1.0
