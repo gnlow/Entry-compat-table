@@ -52,6 +52,16 @@ block:
     change_to_some_shape: 0.1.4
     flip_x: 0.1.7
     flip_y: 0.1.7
+    change_object_index: 0.1.8
+  brush:
+    start_drawing: 0.1.8
+    stop_drawing: 0.1.8
+    set_color: 0.1.8
+    change_thickness: 0.1.8
+    set_thickness: 0.1.8
+    change_brush_transparency: 0.1.8
+    set_brush_tranparency: 0.1.8
+    brush_erase_all: 0.1.8
   text:
     text_read: 0.1.6
     text_write: 0.1.6
@@ -93,6 +103,7 @@ block:
     replace_string: 0.1.5
     reverse_of_string: 0.1.5
     change_string_case: 0.1.5
+    change_rgb_to_hex: 0.1.8
   variable:
     get_variable: 0.1.0
     change_variable: 0.1.0
