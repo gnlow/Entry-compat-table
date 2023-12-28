@@ -94,7 +94,9 @@ const gen = result.map(
                     if (stat[project]) {
                         if (stat[project].endsWith("*")) {
                             return `<td partial>${stat[project]}</td>`
-                        } else {
+                        } else if (stat[project].endsWith("-")) {
+                            return `<td skip>${stat[project]}</td>`
+                        } {
                             return `<td o>${stat[project]}</td>`
                         }
                     } else {

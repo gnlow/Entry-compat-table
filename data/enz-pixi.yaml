@@ -53,6 +53,8 @@ block:
     flip_x: 0.1.7
     flip_y: 0.1.7
     change_object_index: 0.1.8
+    dialog_time: 0.1.9* # Console only
+    remove_dialog: 0.1.9-
   brush:
     start_drawing: 0.1.8
     stop_drawing: 0.1.8
@@ -68,6 +70,8 @@ block:
     text_append: 0.1.6
     text_prepend: 0.1.6
     text_flush: 0.1.6
+    # text_color: 0.1.9
+    text_change_font_color: 0.1.9
   sound:
     # get_sounds: 0.1.7
     sound_something_with_block: 0.1.7
@@ -77,6 +81,10 @@ block:
     sound_something_second_wait_with_block: 0.1.7
     sound_from_to_and_wait: 0.1.7
     play_bgm: 0.1.7
+    get_sound_duration: 0.1.9
+    get_sound_volume: 0.1.9
+    sound_volume_change: 0.1.9
+    sound_volume_set: 0.1.9
   judgement:
     # True: 0.1.1
     # False: 0.1.1
@@ -104,6 +112,7 @@ block:
     reverse_of_string: 0.1.5
     change_string_case: 0.1.5
     change_rgb_to_hex: 0.1.8
+    set_visible_project_timer: 0.1.9-
   variable:
     get_variable: 0.1.0
     change_variable: 0.1.0
@@ -115,3 +124,7 @@ block:
     change_value_list_index: 0.1.3
     length_of_list: 0.1.3
     is_included_in_list: 0.1.3
+    show_variable: 0.1.9-
+    hide_variable: 0.1.9-
+    show_list: 0.1.9-
+    hide_list: 0.1.9-
