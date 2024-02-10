@@ -39,7 +39,7 @@ for await (const { name: fileName } of Deno.readDir(`data/`)) {
                                 fileName,
                                 type,
                                 category,
-                                name_,
+                                name,
                             })
                         } else {
                             target.stat[project] = status
