@@ -11,7 +11,13 @@ block:
     # angle: o
   start:
     when_run_button_click: o
+    mouse_clicked: o
+    mouse_click_cancled: o
+    when_scene_start: o
+    start_scene: o
+    start_neighbor_scene: o
   flow:
+    when_clone_start: o
     wait_second: o
     wait_until_true: o
     repeat_basic: o
@@ -21,8 +27,7 @@ block:
     if_else: o
     stop_repeat: o
     stop_object: o
-  looks:
-    dialog: o
+    create_clone: o
   moving:
     move_direction: o
     move_x: o
@@ -33,14 +38,56 @@ block:
     locate_y: o
     locate_xy: o
     rotate_relative: o
+  looks:
+    show: o
+    hide: o
+    dialog: o
+    change_object_index: o
+  brush:
+    start_drawing: o
+    stop_drawing: o
+    set_color: o
+    set_thickness: o
+    set_brush_tranparency: o
+    brush_erase_all: o
+  sound:
+    sound_something_with_block: o
+    sound_from_to: o
   judgement:
+    #is_press_some_key: o
+    is_clicked: o
     boolean_basic_operator: o
-    reach_something: o
+    boolean_and_or: o
+    boolean_not: o
+    reach_something: o*
   calc:
     calc_basic: o
     calc_rand: o
+    coordinate_mouse: o
+    coordinate_object: o
+    quotient_and_mod: o
+    calc_operation: o
     choose_project_timer_action: o
     get_project_timer_value: o
+    length_of_string: o
+    count_match_string: o
+    combine_something: o
+    char_at: o
+    substring: o
+    index_of_string: o
+    replace_string: o
+    reverse_of_string: o
+    change_string_case: o
   variable:
     set_variable: o
+    #set_func_variable: o
     get_variable: o
+    #get_func_variable: o
+    change_variable: o
+    value_of_index_from_list: o
+    add_value_to_list: o
+    remove_value_from_list: o
+    insert_value_to_list: o
+    change_value_list_index: o
+    length_of_list: o
+    is_included_in_list: o
