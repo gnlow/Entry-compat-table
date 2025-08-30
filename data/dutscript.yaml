@@ -80,9 +80,7 @@ block:
     change_string_case: o
   variable:
     set_variable: o
-    #set_func_variable: o
     get_variable: o
-    #get_func_variable: o
     change_variable: o
     value_of_index_from_list: o
     add_value_to_list: o
@@ -91,3 +89,6 @@ block:
     change_value_list_index: o
     length_of_list: o
     is_included_in_list: o
+  func:
+    set_func_variable: o
+    get_func_variable: o

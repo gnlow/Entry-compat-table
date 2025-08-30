@@ -144,3 +144,6 @@ block:
     hide_variable: 0.1.9-
     show_list: 0.1.9-
     hide_list: 0.1.9-
+  func:
+    set_func_variable: o
+    get_func_variable: o

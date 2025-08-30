@@ -1,5 +1,7 @@
 ---
 start:
+  messageAddButton:
+    template: 신호 만들기
   when_run_button_click:
     template: "{시작하기 버튼을 클릭했을 때}"
   when_some_key_pressed:
@@ -25,12 +27,12 @@ start:
   start_neighbor_scene:
     template: "{[다음 | 이전] 장면 시작하기}"
   check_object_property:
-    template: "{[대상 없음] 가 [언젠가 | 지금] [x | y | 크기 | 방향 | 이동 방향 | 텍스트] [= | > | < |
-      ≥ | ≤] (10)}"
+    template: "{[모양] 가 [언젠가 | 지금] [x | y | 크기 | 방향 | 이동 방향 | 텍스트] [= | > | < | ≥ |
+      ≤] (10)}"
   check_block_execution:
-    template: "{[대상 없음] 에서 아래 블록이 [비슷하게 | 똑같이] [TextInput] 번 실행되었는가 { }}"
+    template: "{[allSprites] 에서 아래 블록이 [비슷하게 | 똑같이] [TextInput] 번 실행되었는가 { }}"
   switch_scope:
-    template: "{[대상 없음] 오브젝트 기준으로 실행하기}"
+    template: "{[모양] 오브젝트 기준으로 실행하기}"
   is_answer_submited:
     template: "{대답을 입력 받을때 까지 기다리기}"
   check_lecture_goal:
@@ -62,6 +64,8 @@ flow:
     template: "{<참> [이 될 때까지 | 인 동안] 반복하기 { }}"
   stop_repeat:
     template: "{반복 중단하기}"
+  continue_repeat:
+    template: "{이번 반복 건너뛰기}"
   _if:
     template: "{만일 <참> (이)라면 { }}"
   if_else:
@@ -69,7 +73,7 @@ flow:
   wait_until_true:
     template: "{<참> 이(가) 될 때까지 기다리기}"
   stop_object:
-    template: "{[모든 | 자신의 | 이 | 자신의 다른 | 다른 오브젝트의] 코드 멈추기}"
+    template: "{[모든 | 자신의 | 이 블록의 | 자신의 다른 | 다른 오브젝트의] 코드 멈추기}"
   restart_project:
     template: "{처음부터 다시 실행하기}"
   when_clone_start:
@@ -144,6 +148,10 @@ looks:
     template: "{크기를 (10) 만큼 바꾸기}"
   set_scale_size:
     template: "{크기를 (10) (으)로 정하기}"
+  stretch_scale_size:
+    template: "{[가로 | 세로] 를 (10) 만큼 늘이기}"
+  reset_scale_size:
+    template: "{원래 크기로 되돌리기}"
   flip_x:
     template: "{상하 모양 뒤집기}"
   flip_y:
@@ -187,7 +195,7 @@ text:
   text_prepend:
     template: "{(10) 을(를) 앞에 추가하기}"
   text_change_effect:
-    template: "{텍스트에 [가로줄 | 밑줄 | 이탤릭 | 볼드] 효과 [켜기 | 끄기]}"
+    template: "{텍스트에 [가로줄 | 밑줄 | 기울임 | 두껍게] 효과 [켜기 | 끄기]}"
   text_change_font:
     template: "{글씨체를 [나눔고딕] (으)로 바꾸기}"
   text_change_font_color:
@@ -212,7 +220,7 @@ sound:
   get_sound_duration:
     template: "([강아지 짖는 소리] 소리의 길이)"
   get_sound_volume:
-    template: "(소리 크기)"
+    template: "(소리 크기 )"
   sound_volume_change:
     template: "{소리 크기를 (10) 만큼 바꾸기}"
   sound_volume_set:
@@ -237,7 +245,7 @@ judgement:
   is_press_some_key:
     template: "<[next] 키가 눌러져 있는가?>"
   reach_something:
-    template: "<[마우스포인터] 에 닿았는가?>"
+    template: "<[마우스 포인터] 에 닿았는가?>"
   is_type:
     template: "<(10) (이)가 [숫자 | 영문 | 한글] 인가?>"
   boolean_basic_operator:
@@ -248,22 +256,26 @@ judgement:
     template: "<<참> (이)가 아니다>"
   is_boost_mode:
     template: "<부스트모드가 켜져 있는가?>"
+  is_current_device_type:
+    template: "<[데스크톱 | 태블릿 | 스마트폰] 에서 실행하는가?>"
+  is_touch_supported:
+    template: "<화면을 터치할 수 있는가?>"
 calc:
   calc_basic:
     template: "((10) [+ | - | x | /] (10))"
   calc_rand:
     template: "((10) 부터 (10) 사이의 무작위 수)"
   coordinate_mouse:
-    template: "(마우스 [x | y] 좌표)"
+    template: "(마우스 [x | y] 좌푯값)"
   coordinate_object:
     template: "([엔트리봇] 의 [x 좌푯값 | y 좌푯값 | 방향 | 이동방향 | 크기 | 모양 번호 | 모양 이름])"
   quotient_and_mod:
     template: "((10) / (10) 의 [몫 | 나머지])"
   calc_operation:
-    template: "((10) 의 [제곱 | 루트 | 사인값 | 코사인값 | 탄젠트값 | 아크사인값 | 아크코사인값 | 아크탄젠트값 | 로그값
-      | 자연로그값 | 소수점 부분 | 소수점 버림값 | 소수점 올림값 | 소수점 반올림값 | 펙토리얼값 | 절댓값])"
+    template: "((10) 의 [제곱 | 루트 | 사인 | 코사인 | 탄젠트 | 아크사인 | 아크코사인 | 아크탄젠트 | 로그 | 자연로그
+      | 소수점 부분 | 소수점 버림값 | 소수점 올림값 | 소수점 반올림값 | 팩토리얼 | 절댓값])"
   get_project_timer_value:
-    template: "(초시계 값)"
+    template: "(초시계 값 )"
   choose_project_timer_action:
     template: "{초시계 [시작하기 | 정지하기 | 초기화하기]}"
   set_visible_project_timer:
@@ -289,17 +301,19 @@ calc:
   index_of_string:
     template: "((10) 에서 (10) 의 시작 위치)"
   replace_string:
-    template: "((10) 의 (10) 을(를) (10) 로 바꾼 값)"
+    template: "((10) 의 (10) 을(를) (10) (으)로 바꾼 값)"
   reverse_of_string:
     template: "((10) 을(를) 뒤집은 값)"
   change_string_case:
-    template: "((10) 의 [대문자 | 소문자])"
+    template: "((10) 을(를) [대문자 | 소문자] 로 바꾼 값)"
   get_block_count:
     template: "([모든] 의 블록 수)"
   change_rgb_to_hex:
     template: "(R:(10)G:(10)B:(10)의 HEX 값)"
   change_hex_to_rgb:
     template: "(HEX(10)의 [R | G | B]값)"
+  get_boolean_value:
+    template: "(<참> 의 값)"
 variable:
   variableAddButton:
     template: 변수 만들기
@@ -316,7 +330,7 @@ variable:
   change_variable:
     template: "{[변수] 에 (10) 만큼 더하기}"
   set_variable:
-    template: "{[변수] 를 (10) (으)로 정하기}"
+    template: "{[변수] 을(를) (10) (으)로 정하기}"
   show_variable:
     template: "{변수 [변수] 보이기}"
   hide_variable:
@@ -330,7 +344,7 @@ variable:
   insert_value_to_list:
     template: "{(10) 을(를) [리스트] 의 (10) 번째에 넣기}"
   change_value_list_index:
-    template: "{[리스트]  (10) 번째 항목을 (10) (으)로 바꾸기}"
+    template: "{[리스트] 의 (10) 번째 항목을 (10) (으)로 바꾸기}"
   length_of_list:
     template: "([리스트] 항목 수)"
   is_included_in_list:
@@ -347,9 +361,9 @@ func:
   showFunctionPropsButton:
     template: 함수 속성 보기
   set_func_variable:
-    template: "{[대상 없음] 를 (10) (으)로 정하기}"
+    template: "{[지역 변수] 을(를) (10) (으)로 정하기}"
   get_func_variable:
-    template: "([대상 없음] 값)"
+    template: "([지역 변수] 값)"
 analysis:
   analizyDataAddButton:
     template: 테이블 불러오기
@@ -376,11 +390,17 @@ analysis:
   open_table_wait:
     template: "{테이블 [테이블] 창을 (10) 초 동안 열기}"
   open_table_chart:
-    template: "{테이블 [테이블]의 [??] 차트 창 열기}"
+    template: "{테이블 [테이블] 의 [??] 차트 창 열기}"
   close_table_chart:
     template: "{테이블 차트 창 닫기}"
   get_coefficient:
-    template: "(테이블 [테이블] (10)과(와) (10)의 상관계수)"
+    template: "(테이블 [테이블] (10) 과(와) (10) 의 상관계수)"
+  set_value_from_cell:
+    template: "{테이블 [테이블] 의 (10) 셀 값을 (10) (으)로 바꾸기}"
+  get_value_from_cell:
+    template: "(테이블 [테이블] 의 (10) 셀 값)"
+  get_value_v_lookup:
+    template: "(테이블 [테이블] 의 (10) 이(가) (10) 인 행의 (10) 값)"
 ai_utilize:
   aiUtilizeBlockAddButton:
     template: 인공지능 블록 불러오기
@@ -606,8 +626,8 @@ ai_utilize:
   translate_title:
     template: 번역
   get_translated_string:
-    template: "([한국어 | 영어 | 일본어 | 중국어간체 | 중국어번체 | 스페인어 | 프랑스어 | 독일어 | 러시아어 | 포르투갈어
-      | 태국어 | 베트남 | 인도네시아어 | 힌디어] (10) 을(를) [??]로 번역한 값)"
+    template: "([한국어 | 영어 | 일본어 | 중국어(간체) | 중국어(번체) | 스페인어 | 프랑스어 | 독일어 | 러시아어 | 포르투갈어
+      | 태국어 | 베트남 | 인도네시아어 | 힌디어] (10) 을(를) [??](으)로 번역한 값)"
   check_language:
     template: "((10)의 언어)"
   video_title:
@@ -762,6 +782,32 @@ expansion:
     template: 확장 블록 불러오기
   weather_title:
     template: 날씨
+  get_cur_weather:
+    template: "(현재 (10)의 날씨)"
+  get_cur_wind:
+    template: "(현재 (10)의 풍향)"
+  get_cur_weather_data:
+    template: "(현재 (10)의 [기온 | 미세먼지농도])"
+  check_cur_weather:
+    template: "<현재 (10)의 날씨가 [맑음 | 구름조금 | 구름많음 | 흐림 | 비 | 진눈깨비 | 눈]인가?>"
+  check_cur_finddust:
+    template: "<현재 (10)의 미세먼지 등급이 [좋음 | 보통 | 나쁨 | 매우나쁨]인가?>"
+  get_day_weather:
+    template: "([어제 | 오늘 | 내일 | 모레 | 3일 후 | 4일 후 | 5일 후 | 6일 후] (10)의 날씨)"
+  get_day_weather_data:
+    template: "([어제 | 오늘 | 내일 | 모레 | 3일 후 | 4일 후 | 5일 후 | 6일 후] (10)의 [최저기온 | 최고기온
+      | 습도 | 강수량 | 강수확률 | 풍속])"
+  check_day_weather:
+    template: "<[어제 | 오늘 | 내일 | 모레 | 3일 후 | 4일 후 | 5일 후 | 6일 후] (10)의 날씨가 [맑음 | 구름조금
+      | 구름많음 | 흐림 | 비 | 진눈깨비 | 눈] 인가?>"
+  get_time_weather:
+    template: "((10)의 [00 | 03 | 06 | 09 | 12 | 15 | 18 | 21]시 날씨)"
+  get_time_weather_data:
+    template: "((10)의 [00 | 03 | 06 | 09 | 12 | 15 | 18 | 21]시 [기온 | 강수량 | 풍속 | 습도
+      | 강수확률])"
+  check_time_weather:
+    template: "<(10)의 [00 | 03 | 06 | 09 | 12 | 15 | 18 | 21]시 날씨가 [맑음 | 구름조금 | 구름많음
+      | 흐림 | 비 | 진눈깨비 | 눈] 인가?>"
   check_weather:
     template: "<[어제 | 오늘 | 내일 | 모레 | 3일 후 | 4일 후 | 5일 후 | 6일 후] [서울 | 강원 | 경기 | 경남
       | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남 | 전북 | 제주 | 충남 | 충북] 의 날씨가 [맑음
@@ -771,11 +817,11 @@ expansion:
       | 전북 | 제주 | 충남 | 충북] 의 미세먼지 등급이 [좋음 | 보통 | 나쁨 | 매우나쁨]인가?>"
   get_weather_data:
     template: "([어제 | 오늘 | 내일 | 모레 | 3일 후 | 4일 후 | 5일 후 | 6일 후] [서울 | 강원 | 경기 | 경남
-      | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남 | 전북 | 제주 | 충남 | 충북] 의 [최저기온(℃)
-      | 최고기온(℃) | 습도(%) | 강수량(mm) | 강수확률(%) | 풍속(m/s)])"
+      | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남 | 전북 | 제주 | 충남 | 충북] 의 [최저기온 |
+      최고기온 | 습도 | 강수량 | 강수확률 | 풍속])"
   get_current_weather_data:
     template: "(현재 [서울 | 강원 | 경기 | 경남 | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남
-      | 전북 | 제주 | 충남 | 충북] 의 [기온(℃) | 미세먼지농도(㎍)])"
+      | 전북 | 제주 | 충남 | 충북] 의 [기온 | 미세먼지농도])"
   get_today_temperature:
     template: "(오늘 [서울 | 강원 | 경기 | 경남 | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남
       | 전북 | 제주 | 충남 | 충북]의 [00 | 03 | 06 | 09 | 12 | 15 | 18 | 21]시 기온)"
@@ -788,11 +834,11 @@ expansion:
       | 전북 | 제주 | 충남 | 충북] [??] 의 미세먼지 등급이 [좋음 | 보통 | 나쁨 | 매우나쁨]인가?>"
   get_city_weather_data:
     template: "([어제 | 오늘 | 내일 | 모레 | 3일 후 | 4일 후 | 5일 후 | 6일 후] [서울 | 강원 | 경기 | 경남
-      | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남 | 전북 | 제주 | 충남 | 충북] [??] 의 [최저기온(℃)
-      | 최고기온(℃) | 습도(%) | 강수량(mm) | 강수확률(%) | 풍속(m/s)])"
+      | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남 | 전북 | 제주 | 충남 | 충북] [??] 의 [최저기온
+      | 최고기온 | 습도 | 강수량 | 강수확률 | 풍속])"
   get_current_city_weather_data:
     template: "(현재 [서울 | 강원 | 경기 | 경남 | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남
-      | 전북 | 제주 | 충남 | 충북] [??] 의 [기온(℃) | 미세먼지농도(㎍)])"
+      | 전북 | 제주 | 충남 | 충북] [??] 의 [기온 | 미세먼지농도])"
   get_today_city_temperature:
     template: "(오늘 [서울 | 강원 | 경기 | 경남 | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남
       | 전북 | 제주 | 충남 | 충북] [??]의 [00 | 03 | 06 | 09 | 12 | 15 | 18 | 21]시 기온)"
@@ -806,19 +852,34 @@ expansion:
     template: "([서울 | 강원 | 경기 | 경남 | 경북 | 광주 | 대구 | 대전 | 부산 | 세종 | 울산 | 인천 | 전남 |
       전북 | 제주 | 충남 | 충북] [1월 | 2월 | 3월 | 4월 | 5월 | 6월 | 7월 | 8월 | 9월 | 10월 | 11월 |
       12월] 행사 (10) 번째 항목의 [제목 | 지역 | 시작일 | 종료일 | 주소 | 개요 | 홈페이지])"
-  behaviorConductDisaster_title:
-    template: 자연재난 국민행동요령
-  count_disaster_behavior:
-    template: "([태풍 | 홍수 | 호우 | 강풍 | 대설 | 한파 | 풍랑 | 황사 | 폭염 | 가뭄 | 지진 | 해일 | 산사태]
-      [??] 해야할 행동요령 수)"
-  get_disaster_behavior:
-    template: "(자연재난[태풍 | 홍수 | 호우 | 강풍 | 대설 | 한파 | 풍랑 | 황사 | 폭염 | 가뭄 | 지진 | 해일 | 산사태]
-      [??] 해야할 행동요령 (10) 번째 항목)"
-  behaviorConductLifeSafety_title:
-    template: 생활안전 국민행동요령
-  count_lifeSafety_behavior:
-    template: "([응급처치 | 심폐소생술 | 소화기사용법 | 소화전사용법 | 식중독 | 산행안전 | 실종유괴 | 성폭력 | 학교 폭력
-      | 가정 폭력 | 억류 및 납치 | 교통사고 | 승강기 안전사고 | 미세먼지] 에서 [??] 방법의 수)"
-  get_lifeSafety_behavior:
-    template: "([응급처치 | 심폐소생술 | 소화기사용법 | 소화전사용법 | 식중독 | 산행안전 | 실종유괴 | 성폭력 | 학교 폭력
-      | 가정 폭력 | 억류 및 납치 | 교통사고 | 승강기 안전사고 | 미세먼지] 에서 [??] 방법 (10) 번째 항목)"
+  emergencyActionGuidelines_title:
+    template: 국민행동요령
+  count_disaster_guideline:
+    template: "(자연재난 [태풍 | 홍수 | 호우 | 강풍 | 대설 | 한파 | 풍랑 | 황사 | 폭염 | 가뭄 | 지진 | 지진해일
+      | 해일 | 산사태 | 화산폭발] [??] 의 행동요령 수)"
+  get_disaster_guideline:
+    template: "(자연재난 [태풍 | 홍수 | 호우 | 강풍 | 대설 | 한파 | 풍랑 | 황사 | 폭염 | 가뭄 | 지진 | 지진해일
+      | 해일 | 산사태 | 화산폭발] [??] 의 행동요령 (10) 번째 항목)"
+  count_social_disaster_guideline:
+    template: "(사회재난 [해양오염 | 대규모 수질오염 | 식용수 | 공동구 재난 | 가축질병 | 감염병 | 철도·지하철 | 금융전산
+      | 원전사고 | 화학물질 | 화재 | 산불 | 건축물 붕괴 | 댐 붕괴 | 폭발 | 항공기 | 화생방 | 정전 및 전력부족 | 전기·가스
+      | 유도선 | 수난사고 | 테러 | 전력수급] [??] 의 행동요령 수)"
+  get_social_disaster_guideline:
+    template: "(사회재난 [해양오염 | 대규모 수질오염 | 식용수 | 공동구 재난 | 가축질병 | 감염병 | 철도·지하철 | 금융전산
+      | 원전사고 | 화학물질 | 화재 | 산불 | 건축물 붕괴 | 댐 붕괴 | 폭발 | 항공기 | 화생방 | 정전 및 전력부족 | 전기·가스
+      | 유도선 | 수난사고 | 테러 | 전력수급] [??] 의 행동요령 (10) 번째 항목)"
+  count_safety_accident_guideline:
+    template: "(생활안전 [응급처치 | 심폐소생술 | 소화기 | 식중독 | 산행 | 어린이 놀이시설 | 실종유괴 | 성폭력 | 학교폭력
+      | 가정폭력 | 억류 및 납치 | 교통사고 | 승강기 | 미세먼지 | 소화전] [??] 의 행동요령 수)"
+  get_safety_accident_guideline:
+    template: "(생활안전 [응급처치 | 심폐소생술 | 소화기 | 식중독 | 산행 | 어린이 놀이시설 | 실종유괴 | 성폭력 | 학교폭력
+      | 가정폭력 | 억류 및 납치 | 교통사고 | 승강기 | 미세먼지 | 소화전] [??] 의 행동요령 (10) 번째 항목)"
+  disaster_alert_title:
+    template: 재난문자
+  count_disaster_alert:
+    template: "(오늘 [전체 | 안전안내 | 위급재난 | 긴급재난] 재난문자 수)"
+  get_disaster_alert:
+    template: "(오늘 [전체 | 안전안내 | 위급재난 | 긴급재난] (10) 번째 재난문자의 [내용 | 수신지역 | 긴급단계 | 재해구분
+      | 생성일시])"
+  check_disaster_alert:
+    template: "<오늘 [전체 | 안전안내 | 위급재난 | 긴급재난] 재난문자가 발송되었는가?>"

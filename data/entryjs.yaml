@@ -5,6 +5,7 @@ feature:
     return: o
 block:
   start:
+    # messageAddButton: o
     when_run_button_click: o
     when_some_key_pressed: o
     mouse_clicked: o
@@ -17,12 +18,26 @@ block:
     when_scene_start: o
     start_scene: o
     start_neighbor_scene: o
+    # check_object_property: o
+    # check_block_execution: o
+    # switch_scope: o
+    # is_answer_submited: o
+    # check_lecture_goal: o
+    # check_variable_by_name: o
+    # show_prompt: o
+    # check_goal_success: o
+    # positive_number: o
+    # negative_number: o
+    # wildcard_string: o
+    # wildcard_boolean: o
+    # register_score: o
   flow:
     wait_second: o
     repeat_basic: o
     repeat_inf: o
     repeat_while_true: o
     stop_repeat: o
+    continue_repeat: o
     _if: o
     if_else: o
     wait_until_true: o
@@ -65,6 +80,8 @@ block:
     erase_all_effects: o
     change_scale_size: o
     set_scale_size: o
+    stretch_scale_size: o
+    reset_scale_size: o
     flip_x: o
     flip_y: o
     change_object_index: o
@@ -119,6 +136,8 @@ block:
     boolean_and_or: o
     boolean_not: o
     is_boost_mode: o
+    is_current_device_type: o
+    is_touch_supported: o
   calc:
     calc_basic: o
     calc_rand: o
@@ -145,6 +164,7 @@ block:
     get_block_count: o
     change_rgb_to_hex: o
     change_hex_to_rgb: o
+    get_boolean_value: o
   variable:
     variableAddButton: o
     listAddButton: o
@@ -165,8 +185,14 @@ block:
     is_included_in_list: o
     show_list: o
     hide_list: o
+  func:
+    # functionAddButton: o
+    # function_name: o
+    # showFunctionPropsButton: o
+    set_func_variable: o
+    get_func_variable: o
   analysis:
-    analizyDataAddButton: o
+    # analizyDataAddButton: o
     append_row_to_table: o
     insert_row_to_table: o
     delete_row_from_table: o
@@ -181,3 +207,6 @@ block:
     open_table_chart: o
     close_table_chart: o
     get_coefficient: o
+    set_value_from_cell: o
+    get_value_from_cell: o
+    get_value_v_lookup: o

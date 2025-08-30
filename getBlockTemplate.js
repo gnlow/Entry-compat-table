@@ -28,6 +28,19 @@ var getBlockTemplate =
                     return
 
                 case "DropdownDynamic":
+                    if (param.options?.[0]?.[0] == "대상 없음") {
+                        if (typeof param.menuName == "function") {
+                            return "[지역 변수]"
+                        }
+                        return `[${{
+                            messages: "신호",
+                            sprites: "모양",
+                            allSprites: "allSprites",
+                            variables: "변수",
+                            lists: "리스트",
+                            tables: "테이블",
+                        }[param.menuName]}]`
+                    }
                     return `[${param.options?.[0]?.[0] || "??"}]`
                 case "Dropdown":
                     return `[${param.options.map(x => x[0]).join(" | ")}]`
@@ -58,6 +71,7 @@ var getBlockTemplate =
         result = result.trim()
             .replace("  ", " ")
             .replace("  ", " ")
+            .replaceAll(/%\d/g, "")
         
         block.statements?.forEach(() => result += " { }")
 
