@@ -73,6 +73,10 @@ block:
     change_brush_transparency: 0.1.8
     set_brush_tranparency: 0.1.8
     brush_erase_all: 0.1.8
+    start_fill: 0.2.2
+    stop_fill: 0.2.2
+    set_fill_color: 0.2.2
+    set_random_color: 0.2.2
   text:
     text_read: 0.1.6
     text_write: 0.1.6
@@ -94,6 +98,7 @@ block:
     get_sound_volume: 0.1.9
     sound_volume_change: 0.1.9
     sound_volume_set: 0.1.9
+    sound_silent_all: 0.2.2
   judgement:
     # True: 0.1.1
     # False: 0.1.1
@@ -104,6 +109,7 @@ block:
     is_clicked: 0.1.10
     is_object_clicked: 0.1.10
     reach_something: 0.1.11* # mouse only
+    is_boost_mode: 0.2.2*
   calc:
     calc_basic: 0.1.0
     calc_rand: 0.1.0
